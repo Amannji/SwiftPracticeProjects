@@ -18,6 +18,11 @@
 		676479642B46E81D009EE483 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676479632B46E81D009EE483 /* AccountView.swift */; };
 		676479662B46E857009EE483 /* AppetizerTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676479652B46E857009EE483 /* AppetizerTabView.swift */; };
 		676479682B46ECAD009EE483 /* Appetizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676479672B46ECAD009EE483 /* Appetizer.swift */; };
+		6764796A2B46F154009EE483 /* AppetizerListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676479692B46F154009EE483 /* AppetizerListCell.swift */; };
+		6764796C2B46F1D0009EE483 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6764796B2B46F1D0009EE483 /* NetworkManager.swift */; };
+		6764796E2B46F5FF009EE483 /* APError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6764796D2B46F5FF009EE483 /* APError.swift */; };
+		676479702B46FE8E009EE483 /* AppetizerListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6764796F2B46FE8E009EE483 /* AppetizerListViewModel.swift */; };
+		676479722B4700EE009EE483 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676479712B4700EE009EE483 /* Alert.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +57,11 @@
 		676479632B46E81D009EE483 /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
 		676479652B46E857009EE483 /* AppetizerTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppetizerTabView.swift; sourceTree = "<group>"; };
 		676479672B46ECAD009EE483 /* Appetizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Appetizer.swift; sourceTree = "<group>"; };
+		676479692B46F154009EE483 /* AppetizerListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppetizerListCell.swift; sourceTree = "<group>"; };
+		6764796B2B46F1D0009EE483 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		6764796D2B46F5FF009EE483 /* APError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APError.swift; sourceTree = "<group>"; };
+		6764796F2B46FE8E009EE483 /* AppetizerListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppetizerListViewModel.swift; sourceTree = "<group>"; };
+		676479712B4700EE009EE483 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +120,11 @@
 				676479632B46E81D009EE483 /* AccountView.swift */,
 				676479652B46E857009EE483 /* AppetizerTabView.swift */,
 				676479672B46ECAD009EE483 /* Appetizer.swift */,
+				676479692B46F154009EE483 /* AppetizerListCell.swift */,
+				6764796B2B46F1D0009EE483 /* NetworkManager.swift */,
+				6764796D2B46F5FF009EE483 /* APError.swift */,
+				6764796F2B46FE8E009EE483 /* AppetizerListViewModel.swift */,
+				676479712B4700EE009EE483 /* Alert.swift */,
 			);
 			path = AppetizersApp;
 			sourceTree = "<group>";
@@ -270,9 +285,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				676479682B46ECAD009EE483 /* Appetizer.swift in Sources */,
+				6764796E2B46F5FF009EE483 /* APError.swift in Sources */,
+				6764796A2B46F154009EE483 /* AppetizerListCell.swift in Sources */,
+				676479702B46FE8E009EE483 /* AppetizerListViewModel.swift in Sources */,
 				676479622B46E80D009EE483 /* OrderView.swift in Sources */,
 				676479362B46E7E2009EE483 /* AppetizersAppApp.swift in Sources */,
+				6764796C2B46F1D0009EE483 /* NetworkManager.swift in Sources */,
 				676479602B46E804009EE483 /* AppetizerListView.swift in Sources */,
+				676479722B4700EE009EE483 /* Alert.swift in Sources */,
 				676479642B46E81D009EE483 /* AccountView.swift in Sources */,
 				676479662B46E857009EE483 /* AppetizerTabView.swift in Sources */,
 			);

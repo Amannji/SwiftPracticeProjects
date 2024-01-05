@@ -28,6 +28,8 @@ struct AlertContext{
     //Mark - Account Error
     static let invalidForm = AlertItem(title:Text("Invalid Form"), message:Text("Your account details are invalid"), dismissButton: .default(Text("OK")))
     static let invalidEmail = AlertItem(title:Text("Invalid Email"), message:Text("Your Email is invalid"), dismissButton: .default(Text("OK")))
+    static let userSavedSuccessfully = AlertItem(title:Text("User saved Successfully!"), message:Text("Congrats!!"), dismissButton: .default(Text("OK")))
+    static let invalidUser = AlertItem(title:Text("Invalid User"), message:Text("Something is wrong."), dismissButton: .default(Text("OK")))
     
     
 }

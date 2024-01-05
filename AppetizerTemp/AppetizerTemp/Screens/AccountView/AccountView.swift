@@ -1,8 +1,8 @@
 //
 //  AccountView.swift
-//  AppetizersApp
+//  AppetizerTemp
 //
-//  Created by Aman Gupta on 04/01/24.
+//  Created by Aman Gupta on 05/01/24.
 //
 
 import SwiftUI
@@ -10,7 +10,7 @@ import SwiftUI
 struct AccountView: View {
     var body: some View {
         NavigationView{
-            Text("AccountView")
+            Text("NavigationView")
                 .navigationTitle("Account")
         }
     }

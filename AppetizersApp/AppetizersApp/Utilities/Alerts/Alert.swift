@@ -18,8 +18,16 @@ struct AlertItem: Identifiable{
 
 
 struct AlertContext{
+    // Mark - Network Errors
+    
     static let invalidData = AlertItem(title:Text("Server Error"), message:Text("Please contact the support"), dismissButton: .default(Text("OK")))
     static let invalidResponse = AlertItem(title:Text("Server Error"), message:Text("Please contact the support"), dismissButton: .default(Text("OK")))
     static let invalidURL = AlertItem(title:Text("Server Error"), message:Text("Please contact the support"), dismissButton: .default(Text("OK")))
     static let unableToDetect = AlertItem(title:Text("Server Error"), message:Text("Please contact the support"), dismissButton: .default(Text("OK")))
+    
+    //Mark - Account Error
+    static let invalidForm = AlertItem(title:Text("Invalid Form"), message:Text("Your account details are invalid"), dismissButton: .default(Text("OK")))
+    static let invalidEmail = AlertItem(title:Text("Invalid Email"), message:Text("Your Email is invalid"), dismissButton: .default(Text("OK")))
+    
+    
 }

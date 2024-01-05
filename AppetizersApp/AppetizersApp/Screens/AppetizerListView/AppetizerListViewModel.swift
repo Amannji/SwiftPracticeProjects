@@ -27,13 +27,13 @@ final class AppetizerListViewModel: ObservableObject{
                 case .failure(let error):
                     switch error{
                     case .invalidResponse:
-                        alertItem = AlertContext.invalidResponse
+                        self.alertItem = AlertContext.invalidResponse
                     case .invalidData:
-                        alertItem = AlertContext.invalidData
+                        self.alertItem = AlertContext.invalidData
                     case .unableToDetect:
-                        alertItem = AlertContext.unableToDetect
+                        self.alertItem = AlertContext.unableToDetect
                     case .invalidURL:
-                        alertItem = AlertContext.invalidURL
+                        self.alertItem = AlertContext.invalidURL
                     }
                 }
             }

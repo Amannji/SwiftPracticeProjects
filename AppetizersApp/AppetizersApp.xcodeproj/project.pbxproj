@@ -31,6 +31,7 @@
 		676479EA2B480770009EE483 /* AccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676479E92B480770009EE483 /* AccountViewModel.swift */; };
 		676479EC2B480885009EE483 /* StringExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676479EB2B480885009EE483 /* StringExt.swift */; };
 		676479EE2B481EB6009EE483 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676479ED2B481EB6009EE483 /* User.swift */; };
+		676479F12B49BE9B009EE483 /* EmptyState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676479F02B49BE9B009EE483 /* EmptyState.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +79,7 @@
 		676479E92B480770009EE483 /* AccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewModel.swift; sourceTree = "<group>"; };
 		676479EB2B480885009EE483 /* StringExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExt.swift; sourceTree = "<group>"; };
 		676479ED2B481EB6009EE483 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		676479F02B49BE9B009EE483 /* EmptyState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -250,6 +252,7 @@
 		676479842B471CDF009EE483 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				676479EF2B49BE64009EE483 /* EmptyState */,
 				676479E62B47F06A009EE483 /* Buttons */,
 				676479872B471D0D009EE483 /* Image */,
 				676479862B471CFF009EE483 /* Cells */,
@@ -288,6 +291,14 @@
 				676479E72B47F089009EE483 /* APButton.swift */,
 			);
 			path = Buttons;
+			sourceTree = "<group>";
+		};
+		676479EF2B49BE64009EE483 /* EmptyState */ = {
+			isa = PBXGroup;
+			children = (
+				676479F02B49BE9B009EE483 /* EmptyState.swift */,
+			);
+			path = EmptyState;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -427,6 +438,7 @@
 				676479EC2B480885009EE483 /* StringExt.swift in Sources */,
 				676479762B470E9C009EE483 /* Color+Ext.swift in Sources */,
 				676479622B46E80D009EE483 /* OrderView.swift in Sources */,
+				676479F12B49BE9B009EE483 /* EmptyState.swift in Sources */,
 				676479E82B47F089009EE483 /* APButton.swift in Sources */,
 				676479742B470DC3009EE483 /* LoadingView.swift in Sources */,
 				676479362B46E7E2009EE483 /* AppetizersAppApp.swift in Sources */,

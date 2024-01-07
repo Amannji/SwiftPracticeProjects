@@ -17,13 +17,14 @@ struct EmptyState: View {
                     .resizable()
                     .scaledToFit()
                     .frame(height:150)
-                Text("Default message")
+                Text("You have no orders in your order. \nPlease add an appetizer!")
                     .font(.title3)
                     .fontWeight(.medium)
                     .multilineTextAlignment(.center)
                     .foregroundColor(.secondary)
-                    .padding()
+                    .padding(.horizontal, 20)
             }
+            
         }
     }
 }

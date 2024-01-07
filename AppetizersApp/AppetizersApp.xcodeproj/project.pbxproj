@@ -32,6 +32,7 @@
 		676479EC2B480885009EE483 /* StringExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676479EB2B480885009EE483 /* StringExt.swift */; };
 		676479EE2B481EB6009EE483 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676479ED2B481EB6009EE483 /* User.swift */; };
 		676479F12B49BE9B009EE483 /* EmptyState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676479F02B49BE9B009EE483 /* EmptyState.swift */; };
+		67D424922B4A9474008F8D6F /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D424912B4A9474008F8D6F /* Order.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +81,7 @@
 		676479EB2B480885009EE483 /* StringExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExt.swift; sourceTree = "<group>"; };
 		676479ED2B481EB6009EE483 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		676479F02B49BE9B009EE483 /* EmptyState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyState.swift; sourceTree = "<group>"; };
+		67D424912B4A9474008F8D6F /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,7 +139,6 @@
 				676479352B46E7E2009EE483 /* AppetizersAppApp.swift */,
 				676479392B46E7E3009EE483 /* Assets.xcassets */,
 				6764793B2B46E7E3009EE483 /* Preview Content */,
-				676479ED2B481EB6009EE483 /* User.swift */,
 			);
 			path = AppetizersApp;
 			sourceTree = "<group>";
@@ -244,7 +245,9 @@
 		676479832B471CD0009EE483 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				676479ED2B481EB6009EE483 /* User.swift */,
 				676479672B46ECAD009EE483 /* Appetizer.swift */,
+				67D424912B4A9474008F8D6F /* Order.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -437,6 +440,7 @@
 				676479702B46FE8E009EE483 /* AppetizerListViewModel.swift in Sources */,
 				676479EC2B480885009EE483 /* StringExt.swift in Sources */,
 				676479762B470E9C009EE483 /* Color+Ext.swift in Sources */,
+				67D424922B4A9474008F8D6F /* Order.swift in Sources */,
 				676479622B46E80D009EE483 /* OrderView.swift in Sources */,
 				676479F12B49BE9B009EE483 /* EmptyState.swift in Sources */,
 				676479E82B47F089009EE483 /* APButton.swift in Sources */,

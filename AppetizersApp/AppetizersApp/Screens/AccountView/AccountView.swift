@@ -10,13 +10,21 @@ import SwiftUI
 struct AccountView: View {
     
     @StateObject var viewModel = AccountViewModel()
+    @FocusState private var focusTextField: FocusStateField?
+    
+    enum FocusStateField{
+        case firstName, lastName, email
+    }
     var body: some View {
         NavigationView{
             Form{
                 Section(header:Text("Personal Info")){
                     TextField("First Name",text: $viewModel.user.firstName)
+                     
                     TextField("Last Name",text: $viewModel.user.lastName)
+                     
                     TextField("Email",text: $viewModel.user.email)
+    
                         .keyboardType(.emailAddress)
                         .autocapitalization(/*@START_MENU_TOKEN@*/.none/*@END_MENU_TOKEN@*/)
                         .autocorrectionDisabled()

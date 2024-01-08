@@ -22,6 +22,10 @@ struct AppetizerListView: View {
                         }
                     
                 }
+                .listStyle(.plain)
+                
+                
+                
                 .navigationTitle("Appetizers")
                 .disabled(isShowingDetail)
                 

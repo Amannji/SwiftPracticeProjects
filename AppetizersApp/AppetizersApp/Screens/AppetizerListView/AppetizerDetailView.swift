@@ -55,14 +55,14 @@ struct AppetizerDetailView: View {
             label:{
                     Text("$\(appetizer.price, specifier: "%.f") - Add To Order")
                     .font(.title2)
-                    .frame(maxWidth: .infinity)
                     .padding()
-                    .background(.brandPrimary)
-                    .cornerRadius(10)
-                    .foregroundColor(.white)
-                    .padding(.horizontal,40)
+                   
                     
                 }
+            .buttonStyle(.bordered)
+            .tint(.brandPrimaryColor)
+            .padding(.bottom,20)
+            
                 
                 Spacer()
                 

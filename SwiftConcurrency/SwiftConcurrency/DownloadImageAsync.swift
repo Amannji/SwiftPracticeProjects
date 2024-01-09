@@ -36,6 +36,17 @@ class DownloadImageLoader{
             .mapError({ $0 })
             .eraseToAnyPublisher()
     }
+    
+    func downloadWithAsync() async throws->UIImage?{
+        do {
+            let (data, response) = try await URLSession.shared.data(from: url, delegate: nil)
+            let image = handleResponse(data:data,response:response)
+            return image
+        }
+        catch {
+            throw error
+        }
+    }
 }
 
 
@@ -44,23 +55,29 @@ class DownloadImageViewModel:ObservableObject{
     let loader = DownloadImageLoader()
     var cancellables = Set<AnyCancellable>()
     
-    func fetchImage(){
-//        self.image = UIImage(systemName: "heart.fill")
-//        loader.downloadImageWithEscaping{ [weak self] image, error in
-//            DispatchQueue.main.async{
-//                self?.image = image
-//            }
-//        }
-        loader.downloadWithCombine()
-            .receive(on: DispatchQueue.main)
-            .sink{ _ in
-                
-            } receiveValue : { [weak self] image in
-                self?.image = image
-            }
-            .store(in: &cancellables)
-            
+    func fetchImage() async{
+     /*
+      //        self.image = UIImage(systemName: "heart.fill")
+      //        loader.downloadImageWithEscaping{ [weak self] image, error in
+      //            DispatchQueue.main.async{
+      //                self?.image = image
+      //            }
+      //        }
+      //        loader.downloadWithCombine()
+      //            .receive(on: DispatchQueue.main)
+      //            .sink{ _ in
+      //
+      //            } receiveValue : { [weak self] image in
+      //                self?.image = image
+      //            }
+      //            .store(in: &cancellables)
+      
+      */
         
+        let image = try? await loader.downloadWithAsync()
+        await MainActor.run{
+            self.image = image 
+        }
         
     }
     
@@ -78,7 +95,9 @@ struct DownloadImageAsync: View {
             }
         }
         .onAppear{
-            viewModel.fetchImage()
+            Task{
+               await viewModel.fetchImage()
+            }
         }
     }
 }

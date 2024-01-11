@@ -22,24 +22,18 @@ class TaskGroupDataManager{
             group.addTask{
                 try await self.fetchImage(urlString: "https://picsum.photos/400")
             }
+            group.addTask{
+                try await self.fetchImage(urlString: "https://picsum.photos/400")
+            }
+            
             
             for try await image in group{
                 images.append(image)
             }
+            return images
         }
         
         
-    }
-    class TaskGroupViewModel: ObservableObject{
-        @Published var images: [UIImage] = []
-        
-        let manager = TaskGroupDataManager()
-        func getImages() async {
-            if let images = try? await manager.fetchImagesWithTaskGroup(){
-                self.images.append(contentsOf: images)
-            }
-                
-        }
     }
     
     func fetchImage(urlString: String) async throws->UIImage{
@@ -63,14 +57,28 @@ class TaskGroupDataManager{
     }
 }
 
-struct TaskGroup: View {
+
+class TaskGroupViewModel: ObservableObject{
+    @Published var images: [UIImage] = []
     
+    let manager = TaskGroupDataManager()
+    func getImages() async {
+        if let images = try? await manager.fetchImagesWithTaskGroup(){
+            self.images.append(contentsOf: images)
+        }
+            
+    }
+}
+
+struct TaskGroup: View {
+    @StateObject var viewModel = TaskGroupViewModel()
+    let columns = [GridItem(.flexible()),GridItem(.flexible())]
     
     var body: some View {
         NavigationView{
             ScrollView{
                 LazyVGrid(columns: columns){
-                    ForEach(images, id: \.self){ image in
+                    ForEach(viewModel.images, id: \.self){ image in
                         Image(uiImage: image)
                             .resizable()
                             .scaledToFit()
@@ -82,6 +90,11 @@ struct TaskGroup: View {
                 
             }
             .navigationTitle("🧠Task Group")
+            .onAppear{
+                Task{
+                    await viewModel.getImages()
+                }
+            }
         
         }
     }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6745859C2B5068AA0087F0DF /* TaskGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6745859B2B5068AA0087F0DF /* TaskGroup.swift */; };
 		676A7B852B4DB9B000BB0FAB /* AsyncAwaitBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676A7B842B4DB9B000BB0FAB /* AsyncAwaitBootcamp.swift */; };
 		67C9C92D2B4F12ED00D8F401 /* AsyncLetBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C9C92C2B4F12ED00D8F401 /* AsyncLetBootcamp.swift */; };
 		67D424A02B4B269A008F8D6F /* SwiftConcurrencyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D4249F2B4B269A008F8D6F /* SwiftConcurrencyApp.swift */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6745859B2B5068AA0087F0DF /* TaskGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskGroup.swift; sourceTree = "<group>"; };
 		676A7B842B4DB9B000BB0FAB /* AsyncAwaitBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncAwaitBootcamp.swift; sourceTree = "<group>"; };
 		67C9C92C2B4F12ED00D8F401 /* AsyncLetBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncLetBootcamp.swift; sourceTree = "<group>"; };
 		67D4249C2B4B269A008F8D6F /* SwiftConcurrency.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftConcurrency.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -67,6 +69,7 @@
 				67D424AF2B4B3022008F8D6F /* DownloadImageAsync.swift */,
 				676A7B842B4DB9B000BB0FAB /* AsyncAwaitBootcamp.swift */,
 				67C9C92C2B4F12ED00D8F401 /* AsyncLetBootcamp.swift */,
+				6745859B2B5068AA0087F0DF /* TaskGroup.swift */,
 			);
 			path = SwiftConcurrency;
 			sourceTree = "<group>";
@@ -153,6 +156,7 @@
 				67C9C92D2B4F12ED00D8F401 /* AsyncLetBootcamp.swift in Sources */,
 				67D424AE2B4B27C1008F8D6F /* DoCatchTryView.swift in Sources */,
 				67D424A22B4B269A008F8D6F /* ContentView.swift in Sources */,
+				6745859C2B5068AA0087F0DF /* TaskGroup.swift in Sources */,
 				676A7B852B4DB9B000BB0FAB /* AsyncAwaitBootcamp.swift in Sources */,
 				67D424A02B4B269A008F8D6F /* SwiftConcurrencyApp.swift in Sources */,
 			);

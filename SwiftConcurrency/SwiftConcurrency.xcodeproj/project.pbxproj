@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		671105A02B52975F006DC600 /* CheckContinuationBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6711059F2B52975F006DC600 /* CheckContinuationBootcamp.swift */; };
 		6745859C2B5068AA0087F0DF /* TaskGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6745859B2B5068AA0087F0DF /* TaskGroup.swift */; };
 		676A7B852B4DB9B000BB0FAB /* AsyncAwaitBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676A7B842B4DB9B000BB0FAB /* AsyncAwaitBootcamp.swift */; };
 		67C9C92D2B4F12ED00D8F401 /* AsyncLetBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C9C92C2B4F12ED00D8F401 /* AsyncLetBootcamp.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6711059F2B52975F006DC600 /* CheckContinuationBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckContinuationBootcamp.swift; sourceTree = "<group>"; };
 		6745859B2B5068AA0087F0DF /* TaskGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskGroup.swift; sourceTree = "<group>"; };
 		676A7B842B4DB9B000BB0FAB /* AsyncAwaitBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncAwaitBootcamp.swift; sourceTree = "<group>"; };
 		67C9C92C2B4F12ED00D8F401 /* AsyncLetBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncLetBootcamp.swift; sourceTree = "<group>"; };
@@ -70,6 +72,7 @@
 				676A7B842B4DB9B000BB0FAB /* AsyncAwaitBootcamp.swift */,
 				67C9C92C2B4F12ED00D8F401 /* AsyncLetBootcamp.swift */,
 				6745859B2B5068AA0087F0DF /* TaskGroup.swift */,
+				6711059F2B52975F006DC600 /* CheckContinuationBootcamp.swift */,
 			);
 			path = SwiftConcurrency;
 			sourceTree = "<group>";
@@ -152,6 +155,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				671105A02B52975F006DC600 /* CheckContinuationBootcamp.swift in Sources */,
 				67D424B02B4B3022008F8D6F /* DownloadImageAsync.swift in Sources */,
 				67C9C92D2B4F12ED00D8F401 /* AsyncLetBootcamp.swift in Sources */,
 				67D424AE2B4B27C1008F8D6F /* DoCatchTryView.swift in Sources */,

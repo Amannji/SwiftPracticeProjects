@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-
+// CheckContinuations are used for converting non-async code to async code.
 
 class CheckContinuationBootcampManager {
     

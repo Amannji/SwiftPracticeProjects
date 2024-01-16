@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Workspace
    version = "1.0">
+   <Group
+      location = "container:"
+      name = "Problems">
+      <FileRef
+         location = "group:TwoSum.playground">
+      </FileRef>
+      <FileRef
+         location = "group:TwoCityScheduling.playground">
+      </FileRef>
+      <FileRef
+         location = "group:ValidPalindrome.playground">
+      </FileRef>
+   </Group>
    <FileRef
       location = "group:File.swift">
    </FileRef>

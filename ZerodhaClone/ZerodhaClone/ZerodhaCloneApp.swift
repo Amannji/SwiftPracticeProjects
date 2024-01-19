@@ -11,7 +11,7 @@ import SwiftUI
 struct ZerodhaCloneApp: App {
     var body: some Scene {
         WindowGroup {
-            HomeView()
+            EditWatchlistView()
         }
     }
 }

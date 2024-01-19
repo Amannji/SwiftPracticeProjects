@@ -9,12 +9,26 @@ import SwiftUI
 
 struct HomeView: View {
     @State var showOverView: Bool = false
+    @State var selectedTab: String = "WatchList"
     var body: some View {
         ZStack{
             Overview(showOverview: $showOverView)
-            TabView{
-                Group{
-                    WatchlistView(showOverView: $showOverView)
+            VStack{
+                HStack{
+                    Text(selectedTab)
+                        .font(.system(size: 30, weight:.bold, design: .rounded))
+                        
+                    Spacer()
+                    Image(systemName:"chevron.down")
+                        .font(.system(size:30,weight: .bold))
+                        .onTapGesture {
+                            showOverView = true
+                        }
+                        
+                }
+                .padding([.top,.horizontal],20)
+                TabView(selection: $selectedTab){
+                    WatchlistView()
                         .font(.system(size:30,weight:.medium,design: .rounded))
                         .tabItem{
                             Image(systemName:"bookmark")
@@ -26,6 +40,7 @@ struct HomeView: View {
                             Image(systemName:"book.closed")
                             Text("Orders")
                         }
+                        .tag("Orders")
                     
                     Text("Portfolio")
                         .font(.system(size: 30, weight: .medium, design: .rounded))
@@ -33,24 +48,25 @@ struct HomeView: View {
                             Image(systemName: "suitcase")
                             Text("Portfolio")
                         }
+                        .tag("Portfolio")
                     Text("Bids")
                         .font(.system(size: 30, weight: .medium, design: .rounded))
                         .tabItem{
                             Image(systemName:"banknote")
                             Text("Bids")
                         }
+                        .tag("Bids")
                     Text("Profile")
                         .font(.system(size: 30, weight: .medium, design: .rounded))
                         .tabItem{
                             Image(systemName:"person")
                             Text("Profile")
                     }
+                        .tag("Profile")
                 }
-                .padding(.top,20)
             }
-            .offset(y: showOverView ? 450 : 0)
-            .shadow(color: Color.black.opacity(0.3), radius: 10, x: 0, y: showOverView ? 10 : 0)
-            
+            .background(Color.accent)
+            .offset(y: showOverView ? 420 : 0)
         }
         .animation(.default, value:showOverView)
     }

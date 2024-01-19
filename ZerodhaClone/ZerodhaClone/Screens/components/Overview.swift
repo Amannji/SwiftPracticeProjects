@@ -35,7 +35,7 @@ struct Overview: View {
                 .padding(.horizontal)
             VStack(alignment: .leading){
                 Text("Funds")
-                    .padding(.vertical, 15)
+                    .padding(.bottom, 15)
                     .font(.title3)
                 Text("Equity")
                     .font(.subheadline)
@@ -49,7 +49,7 @@ struct Overview: View {
         
         }
 
-        .background(Color(.systemGray6))
+        .background(Color.overview)
         
         
         

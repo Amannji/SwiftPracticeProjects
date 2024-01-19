@@ -13,6 +13,12 @@
       <FileRef
          location = "group:ValidPalindrome.playground">
       </FileRef>
+      <FileRef
+         location = "group:CLimbStairs.playground">
+      </FileRef>
+      <FileRef
+         location = "group:SwiftUIView.swift">
+      </FileRef>
    </Group>
    <FileRef
       location = "group:File.swift">

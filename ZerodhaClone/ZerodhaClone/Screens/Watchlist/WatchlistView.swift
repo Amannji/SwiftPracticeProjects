@@ -8,34 +8,19 @@
 import SwiftUI
 
 struct WatchlistView: View {
-    @Binding var showOverView: Bool
+    
+    @State var listChoice:String = ""
     var body: some View {
         NavigationView{
-            ZStack{
-                VStack{
-                    HStack{
-                        Text("Watchlist")
-                            .font(.system(size: 30, weight:.bold, design: .rounded))
-                            
-                        Spacer()
-                        Image(systemName:"chevron.down")
-                            .font(.system(size:30,weight: .bold))
-                            .onTapGesture {
-                                showOverView = true
-                            }
+            ScrollView(.horizontal,showsIndicators: false){
+                HStack{
+                    ForEach(1...7, id: \.self){ i in
+                        tabListChoice(text:"Watchlist \(i)")
                     }
-                    .padding(.horizontal,20)
-                    Spacer()
                 }
-                .background(
-                    Color(.white)
-                )
-                
-    
+                .padding()
             }
-            
-            
-            }
+        }
         
         
         
@@ -43,5 +28,19 @@ struct WatchlistView: View {
 }
 
 #Preview {
-    WatchlistView(showOverView: .constant(false))
+    WatchlistView()
+}
+
+
+struct tabListChoice: View{
+    var text: String
+    var body: some View{
+        Button{
+            
+        }
+    label:{
+        Text(text)
+            .foregroundColor(Color.primary)
+    }
+    }
 }

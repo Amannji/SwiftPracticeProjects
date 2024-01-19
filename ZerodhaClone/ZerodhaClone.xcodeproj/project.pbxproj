@@ -13,7 +13,6 @@
 		670E9E3C2B591D6800E8E347 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670E9E3B2B591D6800E8E347 /* HomeView.swift */; };
 		670E9E442B59231200E8E347 /* WatchlistView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670E9E432B59231200E8E347 /* WatchlistView.swift */; };
 		670E9E472B592FEE00E8E347 /* Overview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670E9E462B592FEE00E8E347 /* Overview.swift */; };
-		670E9E492B59A30000E8E347 /* carousal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670E9E482B59A30000E8E347 /* carousal.swift */; };
 		670E9E4B2B59A37200E8E347 /* EditWatchlistView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670E9E4A2B59A37200E8E347 /* EditWatchlistView.swift */; };
 /* End PBXBuildFile section */
 
@@ -25,7 +24,6 @@
 		670E9E3B2B591D6800E8E347 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		670E9E432B59231200E8E347 /* WatchlistView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchlistView.swift; sourceTree = "<group>"; };
 		670E9E462B592FEE00E8E347 /* Overview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Overview.swift; sourceTree = "<group>"; };
-		670E9E482B59A30000E8E347 /* carousal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = carousal.swift; sourceTree = "<group>"; };
 		670E9E4A2B59A37200E8E347 /* EditWatchlistView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditWatchlistView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -93,7 +91,6 @@
 			isa = PBXGroup;
 			children = (
 				670E9E432B59231200E8E347 /* WatchlistView.swift */,
-				670E9E482B59A30000E8E347 /* carousal.swift */,
 				670E9E4A2B59A37200E8E347 /* EditWatchlistView.swift */,
 			);
 			path = Watchlist;
@@ -208,7 +205,6 @@
 				670E9E472B592FEE00E8E347 /* Overview.swift in Sources */,
 				670E9E3C2B591D6800E8E347 /* HomeView.swift in Sources */,
 				670E9E4B2B59A37200E8E347 /* EditWatchlistView.swift in Sources */,
-				670E9E492B59A30000E8E347 /* carousal.swift in Sources */,
 				670E9E442B59231200E8E347 /* WatchlistView.swift in Sources */,
 				670E9E2E2B591CCB00E8E347 /* ZerodhaCloneApp.swift in Sources */,
 			);

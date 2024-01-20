@@ -57,6 +57,7 @@
 		670E9E2C2B591CCB00E8E347 /* ZerodhaClone */ = {
 			isa = PBXGroup;
 			children = (
+				67CE60B02B5B97A70041DA08 /* Models */,
 				670E9E3D2B59229500E8E347 /* Screens */,
 				670E9E2D2B591CCB00E8E347 /* ZerodhaCloneApp.swift */,
 				670E9E312B591CCC00E8E347 /* Assets.xcassets */,
@@ -130,6 +131,13 @@
 				670E9E462B592FEE00E8E347 /* Overview.swift */,
 			);
 			path = components;
+			sourceTree = "<group>";
+		};
+		67CE60B02B5B97A70041DA08 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

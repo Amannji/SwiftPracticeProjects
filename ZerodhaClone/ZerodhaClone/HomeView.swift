@@ -29,11 +29,12 @@ struct HomeView: View {
                 .padding([.top,.horizontal],20)
                 TabView(selection: $selectedTab){
                     WatchlistView()
-                        .font(.system(size:30,weight:.medium,design: .rounded))
+                        .padding(.bottom, 20)
                         .tabItem{
                             Image(systemName:"bookmark")
                             Text("Watchlist")
                         }
+                        .tag("Watchlist")
                     Text("Orders")
                         .font(.system(size: 30, weight: .medium, design: .rounded))
                         .tabItem{
@@ -66,7 +67,9 @@ struct HomeView: View {
                 }
             }
             .background(Color.accent)
-            .offset(y: showOverView ? 420 : 0)
+            .offset(y: showOverView ? 450 : 0)
+            .opacity(showOverView ? 0.4:1)
+            .blur(radius: showOverView ? 2 : 0)
         }
         .animation(.default, value:showOverView)
     }

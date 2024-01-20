@@ -13,8 +13,9 @@ struct CardItem: Identifiable{
 
 struct WatchlistView: View {
     let cards = [CardItem(id:0),CardItem(id:1), CardItem(id:2),CardItem(id:3)]
-    @State var listChoice:String = ""
-    @State private var selectedTabIndex:Int = 1
+    @State  var selectedTabIndex:Int = 1
+    @State var listChoice: Int = 1
+    @State var names:[String] = ["ICICI BANK","SBIN","TATAPOWER","TRIDENT","MOTHERSON","CESC","TECHM"]
     var body: some View {
         NavigationView{
             VStack{
@@ -22,6 +23,7 @@ struct WatchlistView: View {
                     HStack(spacing:25){
                         ForEach(1...7, id: \.self){ i in
                             Text("Watchlist \(i)")
+                                .font(.subheadline)
                                 .foregroundColor(selectedTabIndex == i ? Color.blue : Color.primary)
                                 .onTapGesture{
                                     withAnimation{
@@ -41,24 +43,56 @@ struct WatchlistView: View {
                             .animation(.easeInOut,value: selectedTabIndex)
                         
                     }
+                    .frame(height:0)
                     
                 }
                 
-                ScrollView(.horizontal, showsIndicators: false){
-                    LazyHStack{
-                        ForEach(1...7, id: \.self){ i in
-                            RoundedRectangle(cornerRadius:10.0)
-                                .fill(.ultraThinMaterial)
-                                .padding(.horizontal,15)
-                                .containerRelativeFrame(.horizontal)
-                                .id(i)
+                //lists
+                LazyHStack{
+                    ForEach(1...7, id: \.self){ i in
+                        List(names, id: \.self){ name in
+                            listCell(name: name)
+                                .gesture(
+                                    LongPressGesture()
+                                        .onEnded({ _ in
+                                           
+                                            
+                                        })
+                                )
+                            
                         }
+                        .listStyle(.plain)
                         
+                            .padding(.horizontal,15)
+                            .containerRelativeFrame(.horizontal)
+                            .task{
+                                listChoice = i
+                            }
+                            .offset(x:CGFloat(1200 - ((selectedTabIndex - 1) * 400)))
+                        
+                           
                     }
                 }
-                .onAppear{
-                    scrollToCardView(id: selectedTabIndex)
-                }
+                .gesture(
+                    DragGesture()
+                        .onEnded({ value in
+                            let threshold: CGFloat = 30
+                            if value.translation.width >  threshold {
+                                withAnimation{
+                                    selectedTabIndex = max(listChoice - 1, 1)
+                                    listChoice -= 1
+                                }
+                            }
+                            else if value.translation.width < -threshold {
+                                withAnimation{
+                                   selectedTabIndex = min(listChoice + 1, 7)
+                                    listChoice += 1
+                                }
+                            }
+                            
+                        })
+                   
+                )
                 
             }
             
@@ -66,12 +100,7 @@ struct WatchlistView: View {
         }
     }
     
-    private func scrollToCardView(id: Int){
-        withAnimation{
-            listChoice = "Watchlist \(id)"
-        }
-    }
-    
+
    
 }
 

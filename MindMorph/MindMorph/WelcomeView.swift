@@ -49,7 +49,7 @@ struct WelcomeView: View {
                             Image("brain")
                                 .resizable()
                                 .aspectRatio(contentMode: .fit)
-                                .frame(width:geometry.size.width / 2 + 90 )
+                                .frame(width:geometry.size.width / 3 + 90 )
                                 .padding()
                                 .transition(.opacity.animation(.easeOut(duration:1)))
                                 .onAppear{
@@ -71,7 +71,7 @@ struct WelcomeView: View {
                             Image("brain")
                                 .resizable()
                                 .aspectRatio(contentMode: .fit)
-                                .frame(width: geometry.size.width / 2 + 90)
+                                .frame(width: geometry.size.width / 3 + 90)
                                 .padding()
                                 .opacity(0)
                         }

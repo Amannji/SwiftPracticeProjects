@@ -7,32 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6772E6522B73EA980050A5FA /* Level_1_View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6772E6512B73EA980050A5FA /* Level_1_View.swift */; };
-		6772E6542B7635A40050A5FA /* Level1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6772E6532B7635A40050A5FA /* Level1.swift */; };
-		679987D92B715C22002892F6 /* VitiligoVoyageApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 679987D82B715C22002892F6 /* VitiligoVoyageApp.swift */; };
-		679987DB2B715C22002892F6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 679987DA2B715C22002892F6 /* ContentView.swift */; };
-		679987DD2B715C23002892F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 679987DC2B715C23002892F6 /* Assets.xcassets */; };
-		679987E02B715C23002892F6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 679987DF2B715C23002892F6 /* Preview Assets.xcassets */; };
-		679987E72B722DC3002892F6 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 679987E62B722DC3002892F6 /* HomeView.swift */; };
-		679987E92B723EAC002892F6 /* LevelsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 679987E82B723EAC002892F6 /* LevelsView.swift */; };
-		679987EF2B72466F002892F6 /* LevelPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 679987EE2B72466F002892F6 /* LevelPath.swift */; };
+		678394C42B78C1A90055A4C8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678394C32B78C1A90055A4C8 /* AppDelegate.swift */; };
+		678394C62B78C1A90055A4C8 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 678394C52B78C1A90055A4C8 /* art.scnassets */; };
+		678394C82B78C1A90055A4C8 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678394C72B78C1A90055A4C8 /* GameViewController.swift */; };
+		678394CB2B78C1A90055A4C8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 678394C92B78C1A90055A4C8 /* Main.storyboard */; };
+		678394CD2B78C1AA0055A4C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 678394CC2B78C1AA0055A4C8 /* Assets.xcassets */; };
+		678394D02B78C1AA0055A4C8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 678394CE2B78C1AA0055A4C8 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		6772E6512B73EA980050A5FA /* Level_1_View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Level_1_View.swift; sourceTree = "<group>"; };
-		6772E6532B7635A40050A5FA /* Level1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Level1.swift; sourceTree = "<group>"; };
-		679987D52B715C22002892F6 /* VitiligoVoyage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VitiligoVoyage.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		679987D82B715C22002892F6 /* VitiligoVoyageApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VitiligoVoyageApp.swift; sourceTree = "<group>"; };
-		679987DA2B715C22002892F6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		679987DC2B715C23002892F6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		679987DF2B715C23002892F6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		679987E62B722DC3002892F6 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
-		679987E82B723EAC002892F6 /* LevelsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelsView.swift; sourceTree = "<group>"; };
-		679987EE2B72466F002892F6 /* LevelPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelPath.swift; sourceTree = "<group>"; };
+		678394C02B78C1A90055A4C8 /* tempGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tempGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		678394C32B78C1A90055A4C8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		678394C52B78C1A90055A4C8 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
+		678394C72B78C1A90055A4C8 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		678394CA2B78C1A90055A4C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		678394CC2B78C1AA0055A4C8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		678394CF2B78C1AA0055A4C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		679987D22B715C22002892F6 /* Frameworks */ = {
+		678394BD2B78C1A90055A4C8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -42,82 +36,71 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		679987CC2B715C22002892F6 = {
+		678394B72B78C1A90055A4C8 = {
 			isa = PBXGroup;
 			children = (
-				679987D72B715C22002892F6 /* VitiligoVoyage */,
-				679987D62B715C22002892F6 /* Products */,
+				678394C22B78C1A90055A4C8 /* tempGame */,
+				678394C12B78C1A90055A4C8 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		679987D62B715C22002892F6 /* Products */ = {
+		678394C12B78C1A90055A4C8 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				679987D52B715C22002892F6 /* VitiligoVoyage.app */,
+				678394C02B78C1A90055A4C8 /* tempGame.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		679987D72B715C22002892F6 /* VitiligoVoyage */ = {
+		678394C22B78C1A90055A4C8 /* tempGame */ = {
 			isa = PBXGroup;
 			children = (
-				679987D82B715C22002892F6 /* VitiligoVoyageApp.swift */,
-				679987DA2B715C22002892F6 /* ContentView.swift */,
-				679987E62B722DC3002892F6 /* HomeView.swift */,
-				679987DC2B715C23002892F6 /* Assets.xcassets */,
-				679987DE2B715C23002892F6 /* Preview Content */,
-				679987E82B723EAC002892F6 /* LevelsView.swift */,
-				679987EE2B72466F002892F6 /* LevelPath.swift */,
-				6772E6512B73EA980050A5FA /* Level_1_View.swift */,
-				6772E6532B7635A40050A5FA /* Level1.swift */,
+				678394C32B78C1A90055A4C8 /* AppDelegate.swift */,
+				678394C52B78C1A90055A4C8 /* art.scnassets */,
+				678394C72B78C1A90055A4C8 /* GameViewController.swift */,
+				678394C92B78C1A90055A4C8 /* Main.storyboard */,
+				678394CC2B78C1AA0055A4C8 /* Assets.xcassets */,
+				678394CE2B78C1AA0055A4C8 /* LaunchScreen.storyboard */,
 			);
-			path = VitiligoVoyage;
-			sourceTree = "<group>";
-		};
-		679987DE2B715C23002892F6 /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				679987DF2B715C23002892F6 /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
+			path = tempGame;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		679987D42B715C22002892F6 /* VitiligoVoyage */ = {
+		678394BF2B78C1A90055A4C8 /* tempGame */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 679987E32B715C23002892F6 /* Build configuration list for PBXNativeTarget "VitiligoVoyage" */;
+			buildConfigurationList = 678394D32B78C1AA0055A4C8 /* Build configuration list for PBXNativeTarget "tempGame" */;
 			buildPhases = (
-				679987D12B715C22002892F6 /* Sources */,
-				679987D22B715C22002892F6 /* Frameworks */,
-				679987D32B715C22002892F6 /* Resources */,
+				678394BC2B78C1A90055A4C8 /* Sources */,
+				678394BD2B78C1A90055A4C8 /* Frameworks */,
+				678394BE2B78C1A90055A4C8 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = VitiligoVoyage;
-			productName = VitiligoVoyage;
-			productReference = 679987D52B715C22002892F6 /* VitiligoVoyage.app */;
+			name = tempGame;
+			productName = tempGame;
+			productReference = 678394C02B78C1A90055A4C8 /* tempGame.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		679987CD2B715C22002892F6 /* Project object */ = {
+		678394B82B78C1A90055A4C8 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1510;
 				LastUpgradeCheck = 1510;
 				TargetAttributes = {
-					679987D42B715C22002892F6 = {
+					678394BF2B78C1A90055A4C8 = {
 						CreatedOnToolsVersion = 15.1;
 					};
 				};
 			};
-			buildConfigurationList = 679987D02B715C22002892F6 /* Build configuration list for PBXProject "VitiligoVoyage" */;
+			buildConfigurationList = 678394BB2B78C1A90055A4C8 /* Build configuration list for PBXProject "tempGame" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -125,47 +108,63 @@
 				en,
 				Base,
 			);
-			mainGroup = 679987CC2B715C22002892F6;
-			productRefGroup = 679987D62B715C22002892F6 /* Products */;
+			mainGroup = 678394B72B78C1A90055A4C8;
+			productRefGroup = 678394C12B78C1A90055A4C8 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				679987D42B715C22002892F6 /* VitiligoVoyage */,
+				678394BF2B78C1A90055A4C8 /* tempGame */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		679987D32B715C22002892F6 /* Resources */ = {
+		678394BE2B78C1A90055A4C8 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				679987E02B715C23002892F6 /* Preview Assets.xcassets in Resources */,
-				679987DD2B715C23002892F6 /* Assets.xcassets in Resources */,
+				678394C62B78C1A90055A4C8 /* art.scnassets in Resources */,
+				678394D02B78C1AA0055A4C8 /* LaunchScreen.storyboard in Resources */,
+				678394CD2B78C1AA0055A4C8 /* Assets.xcassets in Resources */,
+				678394CB2B78C1A90055A4C8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		679987D12B715C22002892F6 /* Sources */ = {
+		678394BC2B78C1A90055A4C8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6772E6542B7635A40050A5FA /* Level1.swift in Sources */,
-				679987E72B722DC3002892F6 /* HomeView.swift in Sources */,
-				679987E92B723EAC002892F6 /* LevelsView.swift in Sources */,
-				679987DB2B715C22002892F6 /* ContentView.swift in Sources */,
-				6772E6522B73EA980050A5FA /* Level_1_View.swift in Sources */,
-				679987D92B715C22002892F6 /* VitiligoVoyageApp.swift in Sources */,
-				679987EF2B72466F002892F6 /* LevelPath.swift in Sources */,
+				678394C82B78C1A90055A4C8 /* GameViewController.swift in Sources */,
+				678394C42B78C1A90055A4C8 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXVariantGroup section */
+		678394C92B78C1A90055A4C8 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				678394CA2B78C1A90055A4C8 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		678394CE2B78C1AA0055A4C8 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				678394CF2B78C1AA0055A4C8 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
-		679987E12B715C23002892F6 /* Debug */ = {
+		678394D12B78C1AA0055A4C8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -228,7 +227,7 @@
 			};
 			name = Debug;
 		};
-		679987E22B715C23002892F6 /* Release */ = {
+		678394D22B78C1AA0055A4C8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -284,20 +283,19 @@
 			};
 			name = Release;
 		};
-		679987E42B715C23002892F6 /* Debug */ = {
+		678394D42B78C1AA0055A4C8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"VitiligoVoyage/Preview Content\"";
 				DEVELOPMENT_TEAM = 9LCC49V7VY;
-				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIStatusBarHidden = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -305,7 +303,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = co.amanG.VitiligoVoyage;
+				PRODUCT_BUNDLE_IDENTIFIER = co.amanG.tempGame;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -313,20 +311,19 @@
 			};
 			name = Debug;
 		};
-		679987E52B715C23002892F6 /* Release */ = {
+		678394D52B78C1AA0055A4C8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"VitiligoVoyage/Preview Content\"";
 				DEVELOPMENT_TEAM = 9LCC49V7VY;
-				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIStatusBarHidden = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -334,7 +331,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = co.amanG.VitiligoVoyage;
+				PRODUCT_BUNDLE_IDENTIFIER = co.amanG.tempGame;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -345,25 +342,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		679987D02B715C22002892F6 /* Build configuration list for PBXProject "VitiligoVoyage" */ = {
+		678394BB2B78C1A90055A4C8 /* Build configuration list for PBXProject "tempGame" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				679987E12B715C23002892F6 /* Debug */,
-				679987E22B715C23002892F6 /* Release */,
+				678394D12B78C1AA0055A4C8 /* Debug */,
+				678394D22B78C1AA0055A4C8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		679987E32B715C23002892F6 /* Build configuration list for PBXNativeTarget "VitiligoVoyage" */ = {
+		678394D32B78C1AA0055A4C8 /* Build configuration list for PBXNativeTarget "tempGame" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				679987E42B715C23002892F6 /* Debug */,
-				679987E52B715C23002892F6 /* Release */,
+				678394D42B78C1AA0055A4C8 /* Debug */,
+				678394D52B78C1AA0055A4C8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 679987CD2B715C22002892F6 /* Project object */;
+	rootObject = 678394B82B78C1A90055A4C8 /* Project object */;
 }

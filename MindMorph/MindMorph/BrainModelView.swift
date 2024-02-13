@@ -77,6 +77,7 @@ struct ViewController  {
             }
             .ignoresSafeArea()
         }
+            
         
     }
     

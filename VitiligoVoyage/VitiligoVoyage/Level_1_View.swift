@@ -11,6 +11,7 @@ struct Level_1_View: View {
     @State var facts:[String] = ["Fact 1","Fact 2","Fact3","Fact4"]
     @State var myths:[String] = ["Myth 1","Myth 2","Myth3","Myth4"]
     @State var showSuccessOverlay:Bool = false
+    @GestureState private  var dragOffset: CGSize = .zero
    
     
     var body: some View {
@@ -29,24 +30,15 @@ struct Level_1_View: View {
                     Spacer()
                     
                 }
-                    
                 //Facts
                 VStack{
                     List{
-                        ForEach(facts, id:\.self){ text in
-                           Text(text)
-                                .font(.subheadline)
-                                .fontWeight(.medium)
-                                .listRowBackground(
-                                    RoundedRectangle(cornerRadius:5)
-                                        .foregroundColor(.white)
-                                )
-                                .onDrag{
-                                    NSItemProvider(object: text as NSString)
-                                }
+                        ForEach(facts.indices, id:\.self){ index in
+                            textBlock(title: facts[index])
+//                            moveItem(from: &facts, to: &myths,index: index)
+                            
+                            
                         }
-                        
-                        
                         
                     }
                     .listRowSpacing(10.0)
@@ -66,18 +58,12 @@ struct Level_1_View: View {
                 
                 VStack{
                     List{
-                        ForEach(myths, id:\.self){ text in
-                           Text(text)
-                                .font(.subheadline)
-                                .fontWeight(.medium)
-                                .listRowBackground(
-                                    RoundedRectangle(cornerRadius:5)
-                                        .foregroundColor(.white)
-                                )
-                                .onDrag{
-                                    NSItemProvider(object: text as NSString)
-                                }
+                        ForEach(myths.indices, id:\.self){ index in
+                            textBlock(title: myths[index])
+                                
+                               
                         }
+                        
                         
                         
                         
@@ -102,6 +88,24 @@ struct Level_1_View: View {
        
         
     }
+        
+    func shuffleSentences(){
+        facts.shuffle()
+        myths.shuffle()
+        
+    }
+   
+    func moveItem(from source: inout [String], to destination: inout [String], index: Int){
+        let item = source[index]
+        source.remove(at: index)
+        destination.append(item)
+    }
+    
+    func checkCompletion(){
+        if facts ==  facts.sorted() && myths == myths.sorted(){
+            print("Game Over")
+        }
+    }
 }
 
 #Preview {
@@ -109,3 +113,15 @@ struct Level_1_View: View {
 }
 
 
+struct textBlock:View{
+    var title:String
+    var body: some View{
+        Text(title)
+             .font(.subheadline)
+             .fontWeight(.medium)
+             .listRowBackground(
+                 RoundedRectangle(cornerRadius:5)
+                     .foregroundColor(.white)
+             )
+    }
+}

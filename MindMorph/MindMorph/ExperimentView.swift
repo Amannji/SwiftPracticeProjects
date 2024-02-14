@@ -8,11 +8,14 @@
 import SwiftUI
 
 struct ExperimentView: View {
+    let controller = ViewController()
     var body: some View {
         SplitView{
             MorphCodeView()
-                
             BrainModelView()
+                .onAppear{
+                    controller.start()
+                }
         }
         
     }

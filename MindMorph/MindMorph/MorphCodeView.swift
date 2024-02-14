@@ -35,13 +35,12 @@ struct MorphCodeView: View {
                         
                     }
                     
-                    ScrollView(.vertical){
-                        ForEach(blocks){ block in
-                            CodeBlockCell(action:block)
-                            
-                        }
+                }
+                ScrollView(.vertical){
+                    ForEach(blocks){ block in
+                        CodeBlockCell(action:block)
+                        
                     }
-                    
                 }
                 
                 Spacer()
@@ -56,8 +55,8 @@ struct MorphCodeView: View {
             
         }
         
-        .frame(width: UIScreen.main.bounds.width / 2)
-        .ignoresSafeArea(.all)
+        
+
         
         
         
@@ -180,10 +179,10 @@ extension MorphCodeView{
                         }
                 }
                 ScrollView(.horizontal){
-                    HStack(spacing:10){
+                    HStack(spacing:0){
                         ForEach(selectedActionGroup.actions){action in
                             CodeActionTab(action:action)
-                                .padding(.horizontal)
+                                .padding(.horizontal,5)
                         }
                     }
                 }
@@ -208,7 +207,7 @@ extension MorphCodeView{
 struct CodeActionTab: View{
     var action: Action
     var body: some View{
-        RoundedRectangle(cornerRadius: 10)
+        RoundedRectangle(cornerRadius: 5)
             .frame(width:CGFloat(action.code.count*15),height:40)
             .overlay{
                 Text(action.code)

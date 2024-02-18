@@ -12,24 +12,27 @@ struct SelectedBlockCell: View{
     var index: Int
     @EnvironmentObject var vm: CodeViewModel
     var body: some View{
-        CardView(backgroundColor:action.color){
-            HStack{
-                VStack(alignment:.leading){
-                    Text(action.code)
-                        .font(.system(size: 30, weight: .bold))
-                    Text(action.description)
-                        .font(.title)
-                }
-                .foregroundColor(.white)
-                Spacer()
-                Image(systemName:"xmark")
-                    .font(.system(size:40,weight:.bold))
-                    .foregroundColor(.white)
-                    .onTapGesture {
-                        vm.remove(index: index)
+        GeometryReader{ geometry in
+            CardView(backgroundColor:action.color){
+                HStack{
+                    VStack(alignment:.leading){
+                        Text(action.code)
+                            .font(.system(size: 25, weight: .bold))
                     }
+                    .foregroundColor(.white)
+                    Spacer()
+                    Image(systemName:"xmark")
+                        .font(.system(size:25,weight:.bold))
+                        .foregroundColor(.white)
+                        .onTapGesture {
+                            vm.remove(index: index)
+                        }
+                }
+                .frame(width: geometry.size.width)
+                
             }
-            .frame(minWidth:UIScreen.main.bounds.width/2)
+            
+            
         }
     }
 }

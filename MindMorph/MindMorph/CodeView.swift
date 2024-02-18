@@ -13,10 +13,13 @@ struct CodeView: View {
     @State private var selectedActionGroup: ActionGroup = CodeDataSource.actionGroups[0]
     @State var codeDetailViewActive: Bool = false
     @EnvironmentObject var vm: CodeViewModel
+    
     var body: some View {
         ZStack(alignment: .bottom){
             VStack{
-                topInfoBanner
+                if vm.blocks.isEmpty {
+                    topInfoBanner
+                }
                 
                 ScrollView(.vertical){
                     VStack{
@@ -34,9 +37,11 @@ struct CodeView: View {
             }
             
             bottomDrawer
+                .frame(width:UIScreen.main.bounds.width/2)
             
         }
     }
+  
 }
 
 #Preview {
@@ -86,22 +91,7 @@ extension CodeView{
             }
         }
     }
-    public var runBtn: some View{
-        RoundedRectangle(cornerRadius: 10)
-            .frame(width: 130,height:50)
-            .padding()
-            .overlay{
-                HStack{
-                    Image(systemName: "arrowtriangle.right.fill")
-                        .foregroundColor(.white)
-                    Text("Execute")
-                        .foregroundColor(.white)
-                        
-                }
-            }
-    }
-    
-    
+
     public var ActionGroupBtns: some View{
         ScrollView(.horizontal){
             HStack{

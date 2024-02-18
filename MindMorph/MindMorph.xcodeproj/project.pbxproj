@@ -11,6 +11,10 @@
 		672E25D22B81EB8800DC735E /* SelectedBlockCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672E25D12B81EB8800DC735E /* SelectedBlockCell.swift */; };
 		672E25D42B81EBF800DC735E /* CodeActionTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672E25D32B81EBF800DC735E /* CodeActionTab.swift */; };
 		672E25D82B81ECA500DC735E /* CodeBlockCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672E25D72B81ECA500DC735E /* CodeBlockCell.swift */; };
+		673D83B32B82412D00E08D05 /* Brain.dae in Resources */ = {isa = PBXBuildFile; fileRef = 673D83B22B82412D00E08D05 /* Brain.dae */; };
+		673D83B72B824FCD00E08D05 /* CustomTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673D83B62B824FCD00E08D05 /* CustomTabView.swift */; };
+		6769BDE72B822552009D9920 /* RunButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6769BDE62B822552009D9920 /* RunButton.swift */; };
+		6769BDE92B822904009D9920 /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6769BDE82B822904009D9920 /* ResultView.swift */; };
 		678394802B774DAD0055A4C8 /* MindMorphApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6783947F2B774DAD0055A4C8 /* MindMorphApp.swift */; };
 		678394842B774DAE0055A4C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 678394832B774DAE0055A4C8 /* Assets.xcassets */; };
 		678394872B774DAE0055A4C8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 678394862B774DAE0055A4C8 /* Preview Assets.xcassets */; };
@@ -20,7 +24,6 @@
 		678394942B778B030055A4C8 /* CodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678394932B778B030055A4C8 /* CodeView.swift */; };
 		678394E22B78D2B80055A4C8 /* BrainModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678394E12B78D2B80055A4C8 /* BrainModelView.swift */; };
 		678394F12B7946D50055A4C8 /* BrainDiffuse.png in Resources */ = {isa = PBXBuildFile; fileRef = 678394F02B7946D50055A4C8 /* BrainDiffuse.png */; };
-		678394F92B794D740055A4C8 /* Brain.dae in Resources */ = {isa = PBXBuildFile; fileRef = 678394F82B794D740055A4C8 /* Brain.dae */; };
 		67AA98852B7A09D1009E0C36 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67AA98842B7A09D1009E0C36 /* CardView.swift */; };
 		67AA98872B7A1154009E0C36 /* BottomDrawer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67AA98862B7A1154009E0C36 /* BottomDrawer.swift */; };
 		67AA98892B7B60C0009E0C36 /* ChangeFactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67AA98882B7B60C0009E0C36 /* ChangeFactor.swift */; };
@@ -28,11 +31,29 @@
 		67AA98912B7B7289009E0C36 /* CodeDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67AA98902B7B7289009E0C36 /* CodeDataSource.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXBuildRule section */
+		6769BDF62B82358C009D9920 /* PBXBuildRule */ = {
+			isa = PBXBuildRule;
+			compilerSpec = com.apple.compilers.proxy.script;
+			fileType = wrapper.scnassets;
+			inputFiles = (
+			);
+			isEditable = 1;
+			outputFiles = (
+			);
+			script = "# copySceneKitAssets\n";
+		};
+/* End PBXBuildRule section */
+
 /* Begin PBXFileReference section */
 		672E25CF2B81EB3B00DC735E /* CodeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeViewModel.swift; sourceTree = "<group>"; };
 		672E25D12B81EB8800DC735E /* SelectedBlockCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedBlockCell.swift; sourceTree = "<group>"; };
 		672E25D32B81EBF800DC735E /* CodeActionTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeActionTab.swift; sourceTree = "<group>"; };
 		672E25D72B81ECA500DC735E /* CodeBlockCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeBlockCell.swift; sourceTree = "<group>"; };
+		673D83B22B82412D00E08D05 /* Brain.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = Brain.dae; sourceTree = "<group>"; };
+		673D83B62B824FCD00E08D05 /* CustomTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabView.swift; sourceTree = "<group>"; };
+		6769BDE62B822552009D9920 /* RunButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunButton.swift; sourceTree = "<group>"; };
+		6769BDE82B822904009D9920 /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
 		6783947C2B774DAD0055A4C8 /* MindMorph.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MindMorph.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6783947F2B774DAD0055A4C8 /* MindMorphApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MindMorphApp.swift; sourceTree = "<group>"; };
 		678394832B774DAE0055A4C8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -43,7 +64,7 @@
 		678394932B778B030055A4C8 /* CodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeView.swift; sourceTree = "<group>"; };
 		678394E12B78D2B80055A4C8 /* BrainModelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrainModelView.swift; sourceTree = "<group>"; };
 		678394F02B7946D50055A4C8 /* BrainDiffuse.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = BrainDiffuse.png; path = ../BrainDiffuse.png; sourceTree = "<group>"; };
-		678394F82B794D740055A4C8 /* Brain.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = Brain.dae; sourceTree = "<group>"; };
+		67963F582B8240800035E188 /* BrainS.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = BrainS.scn; sourceTree = "<group>"; };
 		67AA98842B7A09D1009E0C36 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		67AA98862B7A1154009E0C36 /* BottomDrawer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomDrawer.swift; sourceTree = "<group>"; };
 		67AA98882B7B60C0009E0C36 /* ChangeFactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeFactor.swift; sourceTree = "<group>"; };
@@ -81,9 +102,10 @@
 		6783947E2B774DAD0055A4C8 /* MindMorph */ = {
 			isa = PBXGroup;
 			children = (
+				673D83B22B82412D00E08D05 /* Brain.dae */,
+				67963F582B8240800035E188 /* BrainS.scn */,
 				672E25CF2B81EB3B00DC735E /* CodeViewModel.swift */,
 				67AA98922B7B7295009E0C36 /* components */,
-				678394F82B794D740055A4C8 /* Brain.dae */,
 				678394F02B7946D50055A4C8 /* BrainDiffuse.png */,
 				678394952B778F7B0055A4C8 /* Model */,
 				678394912B778A400055A4C8 /* SplitView.swift */,
@@ -95,6 +117,8 @@
 				678394932B778B030055A4C8 /* CodeView.swift */,
 				678394E12B78D2B80055A4C8 /* BrainModelView.swift */,
 				67AA98902B7B7289009E0C36 /* CodeDataSource.swift */,
+				6769BDE82B822904009D9920 /* ResultView.swift */,
+				673D83B62B824FCD00E08D05 /* CustomTabView.swift */,
 			);
 			path = MindMorph;
 			sourceTree = "<group>";
@@ -124,6 +148,7 @@
 				672E25D12B81EB8800DC735E /* SelectedBlockCell.swift */,
 				672E25D32B81EBF800DC735E /* CodeActionTab.swift */,
 				672E25D72B81ECA500DC735E /* CodeBlockCell.swift */,
+				6769BDE62B822552009D9920 /* RunButton.swift */,
 			);
 			path = components;
 			sourceTree = "<group>";
@@ -140,6 +165,7 @@
 				6783947A2B774DAD0055A4C8 /* Resources */,
 			);
 			buildRules = (
+				6769BDF62B82358C009D9920 /* PBXBuildRule */,
 			);
 			dependencies = (
 			);
@@ -186,9 +212,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				678394F92B794D740055A4C8 /* Brain.dae in Resources */,
 				678394F12B7946D50055A4C8 /* BrainDiffuse.png in Resources */,
 				678394872B774DAE0055A4C8 /* Preview Assets.xcassets in Resources */,
+				673D83B32B82412D00E08D05 /* Brain.dae in Resources */,
 				678394842B774DAE0055A4C8 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -213,7 +239,10 @@
 				6783948E2B774E930055A4C8 /* WelcomeView.swift in Sources */,
 				672E25D42B81EBF800DC735E /* CodeActionTab.swift in Sources */,
 				672E25D02B81EB3B00DC735E /* CodeViewModel.swift in Sources */,
+				6769BDE92B822904009D9920 /* ResultView.swift in Sources */,
 				67AA98852B7A09D1009E0C36 /* CardView.swift in Sources */,
+				6769BDE72B822552009D9920 /* RunButton.swift in Sources */,
+				673D83B72B824FCD00E08D05 /* CustomTabView.swift in Sources */,
 				678394802B774DAD0055A4C8 /* MindMorphApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

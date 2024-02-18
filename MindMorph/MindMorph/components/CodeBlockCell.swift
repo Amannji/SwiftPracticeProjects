@@ -31,7 +31,7 @@ struct CodeBlockCell: View{
                     .foregroundColor(.white)
             }
             }
-            .frame(minWidth:UIScreen.main.bounds.width/2)
+            
         }
     }
 }

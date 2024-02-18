@@ -8,13 +8,27 @@
 import SwiftUI
 
 struct ExperimentView: View {
-    let controller = ViewController()
-    @StateObject var vm = CodeViewModel()
+    
+    var health:Int = 50
     var body: some View {
         SplitView{
-            CodeView()
-                .environmentObject(vm)
-            BrainModelView()
+//            CodeView()
+//                .environmentObject(vm)
+//            ResultView()
+            CustomTabView()
+            ZStack(alignment:.bottom){
+                
+                BrainModelView()
+                    .overlay{
+                        Text("Brain Health: \(health)%")
+                            .font(.largeTitle)
+                            .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
+                            .foregroundColor(.white)
+                            .offset(y:-400)
+                    }
+                RunButton()
+            }
+                
         }
         
     }

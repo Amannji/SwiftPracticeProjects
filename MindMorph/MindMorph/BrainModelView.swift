@@ -50,29 +50,17 @@ struct ViewController  {
         }
     }
     
-    func applyAnatomyTexture(){
- 
-    }
 }
     
     struct BrainModelView: View {
         let controller = ViewController()
+        
         var body: some View {
             ZStack{
                 SceneView(scene: controller.scene, options: [.allowsCameraControl], preferredFramesPerSecond: 120)
-                   
-                
-                HStack{
-                    TabButton(text: "Simple", mainFunc: controller.applyTextureToAll)
-                    TabButton(text: "Anatomy", mainFunc: controller.applyAnatomyTexture)
-                    TabButton(text: "Remove", mainFunc: controller.removeTexture)
-                }
-                
-                
-            }
-            .onAppear{
-                controller.start()
-                
+                    .onAppear{
+                        controller.start()
+                    }
             }
             .ignoresSafeArea()
         }

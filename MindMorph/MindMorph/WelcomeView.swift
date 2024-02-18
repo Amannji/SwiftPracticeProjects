@@ -13,7 +13,6 @@ struct WelcomeView: View {
     @State private var showBrainImage: Bool = false
     @State private var showMorphBtn: Bool = false
     @State private var index: Int = 0
-    @State private var showBrainModelView: Bool = false
     let timer = Timer.publish(every: 0.2, on: .main, in: .common).autoconnect()
     
     var body: some View {
@@ -46,25 +45,20 @@ struct WelcomeView: View {
                             }
                Spacer()
                         if showBrainImage{
-                            Image("brain")
-                                .resizable()
-                                .aspectRatio(contentMode: .fit)
-                                .frame(width:geometry.size.width / 3 + 90 )
-                                .padding()
-                                .transition(.opacity.animation(.easeOut(duration:1)))
-                                .onAppear{
-                                    withAnimation(.easeOut(duration: 1).delay(1)){
-                                        showMorphBtn = true
-                                    }
-                                }
-                                .onTapGesture {
-                                    showBrainModelView = true
-                                }
-                                .background(
-                                    NavigationLink(destination: BrainModelView(), isActive: $showBrainModelView){
-                                        EmptyView()
-                                    }
-                                )
+                            
+                                NavigationLink(destination: BrainModelView()){
+                                    Image("brain")
+                                        .resizable()
+                                        .aspectRatio(contentMode: .fit)
+                                        .frame(width:geometry.size.width / 3 + 90 )
+                                        .padding()
+                                        .transition(.opacity.animation(.easeOut(duration:1)))
+                                        .onAppear{
+                                            withAnimation(.easeOut(duration: 1).delay(1)){
+                                                showMorphBtn = true
+                                            }
+                                        }
+                            }
                             
                         }
                         else{

@@ -11,7 +11,7 @@ import SwiftUI
 class CodeDataSource{
     static var actionGroups: [ActionGroup]{
         [
-            food, exercise, entertainment
+            food, exercise, entertainment, hygiene, cognitiveAgility
         ]
     }
     
@@ -23,12 +23,12 @@ class CodeDataSource{
             color: Color.orange,
             actions:[
                 Action(
-                    code:"Cooking()",
+                    code:"Cook()",
                     description: "Prepare and eat dishes rich in nutrients",
                     color:Color.orange
                 ),
                 Action(
-                    code:"Eating Fruits()",
+                    code:"Eat Fruits()",
                     description: "Replenish vitamins and make more collagen",
                     color:Color.orange
                 ),
@@ -49,7 +49,12 @@ class CodeDataSource{
             color: Color.red,
             actions:[
                 Action(
-                    code:"Pull Day",
+                    code:"Pull Day()",
+                    description:"Engage in exercises to make up your back muscles",
+                    color:Color.red
+                ),
+                Action(
+                    code:"HIIT Workout Challenge()",
                     description:"Engage in exercises to make up your back muscles",
                     color:Color.red
                 ),
@@ -67,8 +72,54 @@ class CodeDataSource{
                     code:"Bingwatch a Korean Drama",
                     description: "Continuously sit in front of a screen, and follow through the story for 14 hours straight.",
                     color: Color.yellow
+                ),
+                Action(
+                    code:"Play a strategy based game",
+                    description: "Continuously sit in front of a screen, and follow through the story for 14 hours straight.",
+                    color: Color.yellow
                 )
             
+            ]
+        )
+    }
+    
+    static var hygiene: ActionGroup{
+        ActionGroup(
+            groupName:"Hygiene",
+            iconName:"",
+            color: Color.green,
+            actions:[
+                Action(
+                    code: "Get Adequate Sleep()",
+                    description:"Get enough sleep for 7-8 hours",
+                    color:Color.green
+                    
+                ),
+                Action(
+                    code:"Have a bath()",
+                    description:"The everyday activity to maintain a good-level of hygiene",
+                    color:Color.green
+                )
+            ]
+        )
+    }
+    
+    static var cognitiveAgility: ActionGroup{
+        ActionGroup(
+            groupName:"Critical Thinking",
+            iconName:"",
+            color:Color.gray,
+            actions:[
+                Action(
+                    code: "Play Crossword()",
+                    description:"Rearrange and fill out missing pieces",
+                    color: Color.gray
+                ),
+                Action(
+                    code: "Play Sudoku()",
+                    description:"Fill out missing numbers()",
+                    color:Color.gray
+                )
             ]
         )
     }

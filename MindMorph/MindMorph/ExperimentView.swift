@@ -9,13 +9,12 @@ import SwiftUI
 
 struct ExperimentView: View {
     let controller = ViewController()
+    @StateObject var vm = CodeViewModel()
     var body: some View {
         SplitView{
-            MorphCodeView()
+            CodeView()
+                .environmentObject(vm)
             BrainModelView()
-                .onAppear{
-                    controller.start()
-                }
         }
         
     }

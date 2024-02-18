@@ -19,7 +19,7 @@ class CodeDataSource{
     static var food:ActionGroup{
         ActionGroup(
             groupName:"Food",
-            iconName:"",
+            iconName:"fork.knife",
             color: Color.orange,
             actions:[
                 Action(
@@ -45,7 +45,7 @@ class CodeDataSource{
     static var exercise: ActionGroup{
         ActionGroup(
             groupName:"Exercise",
-            iconName:"",
+            iconName:"dumbbell",
             color: Color.red,
             actions:[
                 Action(
@@ -65,16 +65,16 @@ class CodeDataSource{
     static var entertainment:ActionGroup{
         ActionGroup(
             groupName:"Entertainment",
-            iconName:"",
+            iconName:"play.tv",
             color: Color.yellow,
             actions:[
                 Action(
-                    code:"Bingwatch a Korean Drama",
+                    code:"Bingwatch a Korean Drama()",
                     description: "Continuously sit in front of a screen, and follow through the story for 14 hours straight.",
                     color: Color.yellow
                 ),
                 Action(
-                    code:"Play a strategy based game",
+                    code:"Play a strategy based game()",
                     description: "Continuously sit in front of a screen, and follow through the story for 14 hours straight.",
                     color: Color.yellow
                 )
@@ -86,7 +86,7 @@ class CodeDataSource{
     static var hygiene: ActionGroup{
         ActionGroup(
             groupName:"Hygiene",
-            iconName:"",
+            iconName:"bubbles.and.sparkles",
             color: Color.green,
             actions:[
                 Action(
@@ -107,7 +107,7 @@ class CodeDataSource{
     static var cognitiveAgility: ActionGroup{
         ActionGroup(
             groupName:"Critical Thinking",
-            iconName:"",
+            iconName:"brain",
             color:Color.gray,
             actions:[
                 Action(

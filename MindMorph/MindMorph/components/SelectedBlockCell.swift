@@ -28,11 +28,7 @@ struct SelectedBlockCell: View{
                             vm.remove(index: index)
                         }
                 }
-                .frame(width: geometry.size.width)
-                
             }
-            
-            
         }
     }
 }

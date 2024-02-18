@@ -22,13 +22,12 @@ struct CodeView: View {
                 }
                 
                 ScrollView(.vertical){
-                    VStack{
+                    VStack(spacing:100){
                         ForEach(Array(zip(vm.blocks.indices,vm.blocks)),id:\.0){ i,b in
                             SelectedBlockCell(action: b,index: i)
                         }
                     }
                 }
-                Spacer()
             }
             .zIndex(1)
             .overlay{
@@ -58,7 +57,7 @@ struct ActivityTitleBtn: View{
     @Binding var selectedTabIndex: Int
     var body: some View{
         HStack{
-            Image(systemName: "brain.fill")
+            Image(systemName: image)
             Text(title)
                 .foregroundColor(selectedTabIndex == index ? .blue : .black)
         }
@@ -97,7 +96,7 @@ extension CodeView{
             HStack{
                 ForEach(CodeDataSource.actionGroups){actionGroup in
                     HStack{
-                        Image(systemName: "brain.fill")
+                        Image(systemName: actionGroup.iconName)
                         Text(actionGroup.groupName)
                     }
                     .padding()

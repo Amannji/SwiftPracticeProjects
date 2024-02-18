@@ -19,10 +19,10 @@ struct CustomTabView: View {
                     .tag(0)
                 ResultView()
                     .tag(1)
+                    
             }
             .tabViewStyle(.page(indexDisplayMode: .never))
-            .transition(.slide)
-            
+            .animation(.easeInOut,value:selectedTab)
         }
         
     }

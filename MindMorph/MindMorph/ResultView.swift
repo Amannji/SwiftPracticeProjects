@@ -8,24 +8,28 @@
 import SwiftUI
 
 struct ResultView: View {
+    @Binding var brain: Brain
     var body: some View {
         ScrollView{
             VStack{
                 CardView{
-                    Text("NeuroChemical Composition Score")
-                        .font(.title)
-                    ForEach(1...3,id:\.self){_ in
-                        Stat(text:"Dopamine",progress:30)
+                 
+                    VStack(alignment:.leading,spacing:40){
+                        Text("NeuroChemical Composition Score")
+                            .font(.largeTitle)
+                            .fontWeight(.black)
+                        ProgressView(text:"Dopamine",progress:brain.dopamine.percentage)
+                        ProgressView(text:"Serotonin",progress:brain.serotonin.percentage)
+                        ProgressView(text:"Acetylcholine",progress:brain.acetylcholine.percentage)
+                        ProgressView(text:"Gaba",progress:brain.gaba.percentage)
+                        ProgressView(text:"Glutamate",progress:brain.glutamate.percentage)
                     }
+                    .padding()
                 }
                 
                 CardView{
                     Text("Mental Abilities Score")
                         .font(.title)
-                    ForEach(1...3,id:\.self){_ in
-                        Stat(text:"Focus",progress:10)
-                        
-                    }
                 }
             }
         }
@@ -34,34 +38,41 @@ struct ResultView: View {
 }
 
 #Preview {
-    ResultView()
+    ResultView(brain: .constant(Brain(
+        dopamine:Amount(0.2),
+        serotonin:Amount(0.3),
+        acetylcholine:Amount(0.4),
+        gaba:Amount(0.2),
+        glutamate:Amount(0.8)
+    )))
+    
 }
 
-struct Stat: View{
-    var text: String
-    var progress: Int
-    var body: some View{
-        HStack{
-            Text(text)
-                .font(.largeTitle)
-            Spacer()
-            ZStack{
-                Circle()
-                    .stroke(Color(.systemGray6),lineWidth: 10)
-                    .frame(width:100)
-                Circle()
-                    .trim(from:0,to:CGFloat(Double(progress) * 0.01))
-                    .stroke(Color(.systemGreen),lineWidth:10)
-                    .rotationEffect(.degrees(-90))
-                    .frame(width:100)
-                    .overlay{
-                        Text("\(progress)%")
-                            .font(.title)
-                    }
-            }
-        }
-        
-        .padding(.horizontal,50)
-    }
-}
+//struct Stat: View{
+//    var text: String
+//    var progress: Float
+//    var body: some View{
+//        HStack{
+//            Text(text)
+//                .font(.largeTitle)
+//            Spacer()
+//            ZStack{
+//                Circle()
+//                    .stroke(Color(.systemGray6),lineWidth: 10)
+//                    .frame(width:100)
+//                Circle()
+//                    .trim(from:0,to: CGFloat(progress))
+//                    .stroke(Color(.systemGreen),lineWidth:10)
+//                    .rotationEffect(.degrees(-90))
+//                    .frame(width:100)
+//                    .overlay{
+//                        Text("\(progress*100)%")
+//                            .font(.title)
+//                    }
+//            }
+//        }
+//        
+//        .padding(.horizontal,50)
+//    }
+//}
 

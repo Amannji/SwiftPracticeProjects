@@ -10,14 +10,15 @@ import SwiftUI
 struct CustomTabView: View {
     @State var selectedTab:Int = 0
     @StateObject var vm = CodeViewModel()
+    @Binding var brain:Brain
+//    @Binding var result: [ExperimentResult]
     var body: some View {
         VStack{
             TopTabBar(selectedTab: $selectedTab)
             TabView(selection: $selectedTab){
                 CodeView()
-                    .environmentObject(vm)
                     .tag(0)
-                ResultView()
+                ResultView(brain: $brain)
                     .tag(1)
                     
             }
@@ -52,11 +53,12 @@ struct TopTabBar: View{
                     .offset(x:CGFloat(-200 + selectedTab*(400)))
                     .animation(.easeInOut,value: selectedTab)
             }
+            .padding(.bottom)
             
         }
         .frame(width:UIScreen.main.bounds.width/2, height:50)
     }
 }
 #Preview {
-    CustomTabView()
+    CustomTabView(brain: .constant(Brain()))
 }

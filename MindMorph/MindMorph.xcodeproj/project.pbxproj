@@ -24,9 +24,16 @@
 		678394942B778B030055A4C8 /* CodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678394932B778B030055A4C8 /* CodeView.swift */; };
 		678394E22B78D2B80055A4C8 /* BrainModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678394E12B78D2B80055A4C8 /* BrainModelView.swift */; };
 		678394F12B7946D50055A4C8 /* BrainDiffuse.png in Resources */ = {isa = PBXBuildFile; fileRef = 678394F02B7946D50055A4C8 /* BrainDiffuse.png */; };
+		6794F2392B85DFAE0078BC14 /* Brain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6794F2382B85DFAE0078BC14 /* Brain.swift */; };
+		6794F23B2B85E05D0078BC14 /* Amount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6794F23A2B85E05D0078BC14 /* Amount.swift */; };
+		6794F23D2B85E2B10078BC14 /* Executable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6794F23C2B85E2B10078BC14 /* Executable.swift */; };
+		6794F23F2B85E2ED0078BC14 /* Strategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6794F23E2B85E2ED0078BC14 /* Strategy.swift */; };
+		6794F2432B85E7DC0078BC14 /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6794F2422B85E7DC0078BC14 /* ProgressView.swift */; };
+		6794F2452B8612000078BC14 /* Executer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6794F2442B8612000078BC14 /* Executer.swift */; };
+		6794F2472B8616E10078BC14 /* ExperimentResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6794F2462B8616E10078BC14 /* ExperimentResult.swift */; };
 		67AA98852B7A09D1009E0C36 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67AA98842B7A09D1009E0C36 /* CardView.swift */; };
 		67AA98872B7A1154009E0C36 /* BottomDrawer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67AA98862B7A1154009E0C36 /* BottomDrawer.swift */; };
-		67AA98892B7B60C0009E0C36 /* ChangeFactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67AA98882B7B60C0009E0C36 /* ChangeFactor.swift */; };
+		67AA98892B7B60C0009E0C36 /* Levels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67AA98882B7B60C0009E0C36 /* Levels.swift */; };
 		67AA988F2B7B61C5009E0C36 /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67AA988E2B7B61C5009E0C36 /* Action.swift */; };
 		67AA98912B7B7289009E0C36 /* CodeDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67AA98902B7B7289009E0C36 /* CodeDataSource.swift */; };
 /* End PBXBuildFile section */
@@ -64,10 +71,17 @@
 		678394932B778B030055A4C8 /* CodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeView.swift; sourceTree = "<group>"; };
 		678394E12B78D2B80055A4C8 /* BrainModelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrainModelView.swift; sourceTree = "<group>"; };
 		678394F02B7946D50055A4C8 /* BrainDiffuse.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = BrainDiffuse.png; path = ../BrainDiffuse.png; sourceTree = "<group>"; };
+		6794F2382B85DFAE0078BC14 /* Brain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Brain.swift; sourceTree = "<group>"; };
+		6794F23A2B85E05D0078BC14 /* Amount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Amount.swift; sourceTree = "<group>"; };
+		6794F23C2B85E2B10078BC14 /* Executable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Executable.swift; sourceTree = "<group>"; };
+		6794F23E2B85E2ED0078BC14 /* Strategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strategy.swift; sourceTree = "<group>"; };
+		6794F2422B85E7DC0078BC14 /* ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
+		6794F2442B8612000078BC14 /* Executer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Executer.swift; sourceTree = "<group>"; };
+		6794F2462B8616E10078BC14 /* ExperimentResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperimentResult.swift; sourceTree = "<group>"; };
 		67963F582B8240800035E188 /* BrainS.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = BrainS.scn; sourceTree = "<group>"; };
 		67AA98842B7A09D1009E0C36 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		67AA98862B7A1154009E0C36 /* BottomDrawer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomDrawer.swift; sourceTree = "<group>"; };
-		67AA98882B7B60C0009E0C36 /* ChangeFactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeFactor.swift; sourceTree = "<group>"; };
+		67AA98882B7B60C0009E0C36 /* Levels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Levels.swift; sourceTree = "<group>"; };
 		67AA988E2B7B61C5009E0C36 /* Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Action.swift; sourceTree = "<group>"; };
 		67AA98902B7B7289009E0C36 /* CodeDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeDataSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -105,6 +119,7 @@
 				673D83B22B82412D00E08D05 /* Brain.dae */,
 				67963F582B8240800035E188 /* BrainS.scn */,
 				672E25CF2B81EB3B00DC735E /* CodeViewModel.swift */,
+				67AA98902B7B7289009E0C36 /* CodeDataSource.swift */,
 				67AA98922B7B7295009E0C36 /* components */,
 				678394F02B7946D50055A4C8 /* BrainDiffuse.png */,
 				678394952B778F7B0055A4C8 /* Model */,
@@ -116,9 +131,9 @@
 				6783948F2B77890D0055A4C8 /* ExperimentView.swift */,
 				678394932B778B030055A4C8 /* CodeView.swift */,
 				678394E12B78D2B80055A4C8 /* BrainModelView.swift */,
-				67AA98902B7B7289009E0C36 /* CodeDataSource.swift */,
 				6769BDE82B822904009D9920 /* ResultView.swift */,
 				673D83B62B824FCD00E08D05 /* CustomTabView.swift */,
+				6794F2442B8612000078BC14 /* Executer.swift */,
 			);
 			path = MindMorph;
 			sourceTree = "<group>";
@@ -134,8 +149,13 @@
 		678394952B778F7B0055A4C8 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				67AA98882B7B60C0009E0C36 /* ChangeFactor.swift */,
+				67AA98882B7B60C0009E0C36 /* Levels.swift */,
 				67AA988E2B7B61C5009E0C36 /* Action.swift */,
+				6794F2382B85DFAE0078BC14 /* Brain.swift */,
+				6794F23A2B85E05D0078BC14 /* Amount.swift */,
+				6794F23C2B85E2B10078BC14 /* Executable.swift */,
+				6794F23E2B85E2ED0078BC14 /* Strategy.swift */,
+				6794F2462B8616E10078BC14 /* ExperimentResult.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -149,6 +169,7 @@
 				672E25D32B81EBF800DC735E /* CodeActionTab.swift */,
 				672E25D72B81ECA500DC735E /* CodeBlockCell.swift */,
 				6769BDE62B822552009D9920 /* RunButton.swift */,
+				6794F2422B85E7DC0078BC14 /* ProgressView.swift */,
 			);
 			path = components;
 			sourceTree = "<group>";
@@ -229,9 +250,11 @@
 				67AA98912B7B7289009E0C36 /* CodeDataSource.swift in Sources */,
 				672E25D22B81EB8800DC735E /* SelectedBlockCell.swift in Sources */,
 				678394902B77890D0055A4C8 /* ExperimentView.swift in Sources */,
+				6794F2392B85DFAE0078BC14 /* Brain.swift in Sources */,
 				67AA988F2B7B61C5009E0C36 /* Action.swift in Sources */,
+				6794F2452B8612000078BC14 /* Executer.swift in Sources */,
 				678394E22B78D2B80055A4C8 /* BrainModelView.swift in Sources */,
-				67AA98892B7B60C0009E0C36 /* ChangeFactor.swift in Sources */,
+				67AA98892B7B60C0009E0C36 /* Levels.swift in Sources */,
 				678394942B778B030055A4C8 /* CodeView.swift in Sources */,
 				678394922B778A400055A4C8 /* SplitView.swift in Sources */,
 				67AA98872B7A1154009E0C36 /* BottomDrawer.swift in Sources */,
@@ -240,9 +263,14 @@
 				672E25D42B81EBF800DC735E /* CodeActionTab.swift in Sources */,
 				672E25D02B81EB3B00DC735E /* CodeViewModel.swift in Sources */,
 				6769BDE92B822904009D9920 /* ResultView.swift in Sources */,
+				6794F23B2B85E05D0078BC14 /* Amount.swift in Sources */,
+				6794F23F2B85E2ED0078BC14 /* Strategy.swift in Sources */,
 				67AA98852B7A09D1009E0C36 /* CardView.swift in Sources */,
+				6794F2472B8616E10078BC14 /* ExperimentResult.swift in Sources */,
+				6794F23D2B85E2B10078BC14 /* Executable.swift in Sources */,
 				6769BDE72B822552009D9920 /* RunButton.swift in Sources */,
 				673D83B72B824FCD00E08D05 /* CustomTabView.swift in Sources */,
+				6794F2432B85E7DC0078BC14 /* ProgressView.swift in Sources */,
 				678394802B774DAD0055A4C8 /* MindMorphApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

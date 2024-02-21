@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct MindMorphApp: App {
+    @StateObject var vm = CodeViewModel()
     var body: some Scene {
         WindowGroup {
             WelcomeView()
+                .environmentObject(vm)
         }
     }
 }

@@ -26,13 +26,13 @@ class CodeDataSource{
                     code:"Cook()",
                     description: "Prepare and eat dishes rich in nutrients",
                     color:Color.orange,
-                    chemicalChange: ChemicalLevelsChange(dopamine: 20, serotonin: 10, acetylcholine: 0, gaba:0, glutamate: 0)
+                    chemicalChange: ChemicalLevelsChange(dopamine: 20, serotonin: 10, acetylcholine: -10, gaba:10, glutamate: 0)
                 ),
                 Action(
                     code:"Eat Fruits()",
                     description: "Replenish vitamins and make more collagen",
                     color:Color.orange,
-                    chemicalChange: ChemicalLevelsChange(dopamine: 20, serotonin: 10, acetylcholine: 0, gaba:0, glutamate: 0)
+                    chemicalChange: ChemicalLevelsChange(dopamine: 20, serotonin: 10, acetylcholine: -20, gaba:-20, glutamate: 0)
                 ),
                 Action(
                     code:"Drink Beer()",

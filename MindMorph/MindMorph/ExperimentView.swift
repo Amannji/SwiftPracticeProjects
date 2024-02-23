@@ -18,18 +18,21 @@ struct ExperimentView: View {
         gaba: Amount(0.6),
         glutamate: Amount(0.3)
     )
-    
-    @EnvironmentObject var vm: CodeViewModel
+    @StateObject var vm: CodeViewModel = CodeViewModel()
+    @ObservedObject var scene = SceneConfigurator(sceneName: "Brain.dae")
     @State var blocks:[Action] = []
+    @State var selectedTab: Int = 0
+    
     var body: some View {
         SplitView{
-            CustomTabView(brain: $brain)
-        
+            CustomTabView(selectedTab: $selectedTab, brain: $brain, result: $result, vm: vm)
             ZStack(alignment:.bottom){
-                
-                BrainModelView()
+                BrainModelView(sceneConfigurator: scene)
+                    .onAppear{
+                        scene.start()
+                    }
                     .overlay{
-                        Text("Brain Health: \(health)%")
+                        Text("Brain Health: \(String(format:"%.0f%",brain.brainHealth))%")
                             .font(.largeTitle)
                             .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
                             .foregroundColor(.white)
@@ -38,7 +41,7 @@ struct ExperimentView: View {
                 //run
                 Button(action:{
                     result = run()
-                    
+                    selectedTab = 1
                 }){
                     RoundedRectangle(cornerRadius: 10)
                         .fill(Color.secondary)
@@ -65,29 +68,41 @@ struct ExperimentView: View {
     private func run()->ExperimentResult{
         
         for block in blocks{
-//            var chemicalChanges:[String: BeforeAfterValue] = [:]
-//
+
             if block.chemicalChange.dopamine != 0 {
                 let rr = brain.dopamine.calculate(block.chemicalChange.dopamine)
                 if rr.hasChanged{
                     result.chemicalchangeFactor.dopamine += block.chemicalChange.dopamine
                 }
             }
-//            
-//            if block.chemicalChange.acetylcholine != 0 {
-//                let rr = brain.acetylcholine.calculate(block.chemicalChange.acetylcholine)
-//                if rr.hasChanged{
-//                    chemicalChanges["acetylocholine"] = rr
-//                }
-//            }
-//            
-//            var affectedString = ""
-//            for (key,value) in chemicalChanges{
-//                affectedString.append("\(key) (\(value.before.amount)->\(value.after.amount))")
-//            }
-
+            
+            if block.chemicalChange.acetylcholine != 0 {
+                let rr = brain.acetylcholine.calculate(block.chemicalChange.acetylcholine)
+                if rr.hasChanged{
+                    result.chemicalchangeFactor.acetylcholine += block.chemicalChange.acetylcholine
+                }
+            }
+            
+            if block.chemicalChange.serotonin != 0 {
+                let rr = brain.serotonin.calculate(block.chemicalChange.serotonin)
+                if rr.hasChanged{
+                    result.chemicalchangeFactor.serotonin += block.chemicalChange.serotonin
+                }
+            }
+            
+            if block.chemicalChange.gaba != 0 {
+                let rr = brain.gaba.calculate(block.chemicalChange.gaba)
+                if rr.hasChanged{
+                    result.chemicalchangeFactor.gaba += block.chemicalChange.gaba
+                }
+            }
+            if block.chemicalChange.glutamate != 0 {
+                let rr = brain.glutamate.calculate(block.chemicalChange.glutamate)
+                if rr.hasChanged{
+                    result.chemicalchangeFactor.glutamate += block.chemicalChange.glutamate
+                }
+            }
         }
-        print(result)
         return result
     }
 }

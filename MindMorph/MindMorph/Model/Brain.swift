@@ -13,6 +13,21 @@ struct Brain{
     var gaba: Amount = Amount()
     var glutamate: Amount = Amount()
     
+    private let dopamineImpactFactor: Float = 0.3
+    private let serotoninImpactFactor: Float = 0.25
+    private let acetylcholineImpactFactor: Float = 0.2
+    private let gabaImpactFactor: Float = 0.15
+    private let glutamateImpactFactor: Float = 0.1
+    
+    var brainHealth: Float {
+        let health = Float(dopamine.amount) * dopamineImpactFactor +
+                     Float(serotonin.amount) * serotoninImpactFactor +
+                     Float(acetylcholine.amount) * acetylcholineImpactFactor +
+                     Float(gaba.amount) * gabaImpactFactor +
+                     Float(glutamate.amount) * glutamateImpactFactor
+        return health
+    }
+    
     mutating func effect(chemicalLevels:[ChemicalLevels:Float]? = nil){
         if let chemicalLevels = chemicalLevels{
             if let dopamineChange = chemicalLevels[.dopamine]{

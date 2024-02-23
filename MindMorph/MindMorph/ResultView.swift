@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ResultView: View {
     @Binding var brain: Brain
+    @Binding var result: ExperimentResult
     var body: some View {
         ScrollView{
             VStack{
@@ -18,11 +19,11 @@ struct ResultView: View {
                         Text("NeuroChemical Composition Score")
                             .font(.largeTitle)
                             .fontWeight(.black)
-                        ProgressView(text:"Dopamine",progress:brain.dopamine.percentage)
-                        ProgressView(text:"Serotonin",progress:brain.serotonin.percentage)
-                        ProgressView(text:"Acetylcholine",progress:brain.acetylcholine.percentage)
-                        ProgressView(text:"Gaba",progress:brain.gaba.percentage)
-                        ProgressView(text:"Glutamate",progress:brain.glutamate.percentage)
+                        ProgressView(text:"Dopamine",progress:brain.dopamine.percentage, change:result.chemicalchangeFactor.dopamine)
+                        ProgressView(text:"Serotonin",progress:brain.serotonin.percentage, change:result.chemicalchangeFactor.serotonin)
+                        ProgressView(text:"Acetylcholine",progress:brain.acetylcholine.percentage,change: result.chemicalchangeFactor.acetylcholine)
+                        ProgressView(text:"Gaba",progress:brain.gaba.percentage,change: result.chemicalchangeFactor.gaba)
+                        ProgressView(text:"Glutamate",progress:brain.glutamate.percentage,change:result.chemicalchangeFactor.glutamate)
                     }
                     .padding()
                 }
@@ -44,7 +45,8 @@ struct ResultView: View {
         acetylcholine:Amount(0.4),
         gaba:Amount(0.2),
         glutamate:Amount(0.8)
-    )))
+    )),
+               result: .constant(ExperimentResult(chemicalchangeFactor: ChemicalLevelsChange(dopamine: 10, serotonin: 10, acetylcholine: 10, gaba: 10, glutamate: 10))))
     
 }
 

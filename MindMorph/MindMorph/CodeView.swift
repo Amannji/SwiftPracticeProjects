@@ -43,10 +43,13 @@ struct CodeView: View {
     
 }
 
-#Preview {
-    CodeView()
-        .previewDevice("iPad Pro (12.9-inch) (6th generation)")
-        .previewInterfaceOrientation(.landscapeRight)
+struct CodeView_Previews: PreviewProvider {
+    static var previews: some View {
+        
+        CodeView()
+            .previewDevice("iPad Pro (12.9-inch) (6th generation)")
+            .previewInterfaceOrientation(.landscapeRight)
+    }
 }
 
 

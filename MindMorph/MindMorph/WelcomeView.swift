@@ -13,6 +13,7 @@ struct WelcomeView: View {
     @State private var showBrainImage: Bool = false
     @State private var showMorphBtn: Bool = false
     @State private var index: Int = 0
+    @ObservedObject var scene = SceneConfigurator(sceneName: "Brain.dae")
     let timer = Timer.publish(every: 0.2, on: .main, in: .common).autoconnect()
     
     var body: some View {
@@ -46,7 +47,7 @@ struct WelcomeView: View {
                Spacer()
                         if showBrainImage{
                             
-                                NavigationLink(destination: BrainModelView()){
+                            NavigationLink(destination: BrainModelView(sceneConfigurator: scene)){
                                     Image("brain")
                                         .resizable()
                                         .aspectRatio(contentMode: .fit)

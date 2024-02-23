@@ -10,7 +10,7 @@ import SwiftUI
 struct ProgressView: View {
     var text: String
     var progress: Float
-    var change: Float?
+    var change: Int?
         
     var body: some View {
         GeometryReader{ geometry in
@@ -22,22 +22,22 @@ struct ProgressView: View {
                     RoundedRectangle(cornerRadius: /*@START_MENU_TOKEN@*/25.0/*@END_MENU_TOKEN@*/)
                         .fill(Color(.green))
                         .opacity(0.2)
-                        .frame(width:geometry.size.width/2,height: 15)
+                        .frame(width:geometry.size.width/3,height: 15)
                         
                         
                     RoundedRectangle(cornerRadius: /*@START_MENU_TOKEN@*/25.0/*@END_MENU_TOKEN@*/)
                         .fill(Color.green)
-                        .frame(width: geometry.size.width/2*CGFloat(progress),height:16)
+                        .frame(width: geometry.size.width/3*CGFloat(progress),height:16)
                 }
                 
                 
                 Text(String(format:"%.0f%%",progress*100))
                     .font(.title3.bold())
-                if change != nil{
+                if change != 0{
                     HStack{
                         Image(systemName: "triangle.fill")
                             .rotationEffect( change! > 0 ? .degrees(0) : .degrees(180))
-                        Text(String(format:"%.0f%",(abs(change ?? 0)*100)))
+                        Text(String(abs(change ?? 0)))
                             .font(.title3.bold())
                     }
                     .foregroundColor(change! > 0 ? .green : .red)
@@ -54,5 +54,5 @@ struct ProgressView: View {
 
 
 #Preview {
-    ProgressView(text:"Dopamine",progress:0.3,change:0.2)
+    ProgressView(text:"Dopamine",progress:0.3,change:20)
 }

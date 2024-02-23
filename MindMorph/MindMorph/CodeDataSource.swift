@@ -26,19 +26,23 @@ class CodeDataSource{
                     code:"Cook()",
                     description: "Prepare and eat dishes rich in nutrients",
                     color:Color.orange,
-                    chemicalChange: ChemicalLevelsChange(dopamine: 20, serotonin: 10, acetylcholine: -10, gaba:10, glutamate: 0)
+                    chemicalChange: ChemicalLevelsChange(dopamine: 20, serotonin: 10, acetylcholine: -10, gaba:10, glutamate: 0),
+                    abilityChange: AbilityLevelsChange(memory: 20, attention: 10, perception: 10, emotionalRegulation: 30, executiveFunction: 20)
                 ),
                 Action(
                     code:"Eat Fruits()",
                     description: "Replenish vitamins and make more collagen",
                     color:Color.orange,
-                    chemicalChange: ChemicalLevelsChange(dopamine: 20, serotonin: 10, acetylcholine: -20, gaba:-20, glutamate: 0)
+                    chemicalChange: ChemicalLevelsChange(dopamine: 20, serotonin: 10, acetylcholine: -20, gaba:-20, glutamate: 0),
+                    abilityChange: AbilityLevelsChange(memory: 20, attention: 10, perception: 10, emotionalRegulation: 30, executiveFunction: 20)
+                    
                 ),
                 Action(
                     code:"Drink Beer()",
                     description: "Gives you an instant dizzy feeling.",
                     color:Color.orange,
-                    chemicalChange: ChemicalLevelsChange(dopamine: 30, serotonin: 10, acetylcholine: -10, gaba:-10, glutamate: 0)
+                    chemicalChange: ChemicalLevelsChange(dopamine: 30, serotonin: 10, acetylcholine: -10, gaba:-10, glutamate: 0),
+                    abilityChange: AbilityLevelsChange(memory: 20, attention: 10, perception: 10, emotionalRegulation: 30, executiveFunction: 20)
                 )
             
             ]

@@ -13,7 +13,7 @@ import SceneKit
         @ObservedObject var sceneConfigurator: SceneConfigurator
         var body: some View {
             ZStack{
-                SceneView(scene: sceneConfigurator.scene, options: [.allowsCameraControl], preferredFramesPerSecond: 120)
+                SceneView(scene: sceneConfigurator.scene,pointOfView: sceneConfigurator.cameraNode, options: [.allowsCameraControl], preferredFramesPerSecond: 120)
                     .onAppear{
                         sceneConfigurator.start()
                     }

@@ -7,5 +7,6 @@
 
 import Foundation
 protocol Strategy{
-    var chemicalChange:[ChemicalLevels: Float]{get set }
+    var chemicalChange:[ChemicalLevels: Float]{ get set }
+    var abilityChange:[AbilityLevels: Float]{ get set }
 }

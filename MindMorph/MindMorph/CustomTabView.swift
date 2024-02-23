@@ -62,5 +62,5 @@ struct TopTabBar: View{
     }
 }
 #Preview {
-    CustomTabView(selectedTab: .constant(0), brain: .constant(Brain()),result: .constant(ExperimentResult(chemicalchangeFactor: ChemicalLevelsChange(dopamine: 0, serotonin: 0, acetylcholine: 0, gaba: 0, glutamate: 0))), vm: CodeViewModel())
+    CustomTabView(selectedTab: .constant(0), brain: .constant(Brain()),result: .constant(ExperimentResult(chemicalchangeFactor: ChemicalLevelsChange(dopamine: 0, serotonin: 0, acetylcholine: 0, gaba: 0, glutamate: 0),abilityChangeFactor: AbilityLevelsChange(memory: 0, attention: 0, perception: 0, emotionalRegulation: 0, executiveFunction: 0))), vm: CodeViewModel())
 }

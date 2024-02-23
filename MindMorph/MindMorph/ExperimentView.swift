@@ -8,9 +8,13 @@
 import SwiftUI
 
 struct ExperimentView: View {
-    @State var result: ExperimentResult = ExperimentResult(chemicalchangeFactor: ChemicalLevelsChange(dopamine: 0, serotonin: 0, acetylcholine: 0, gaba: 0, glutamate: 0))
+    @State var result: ExperimentResult = ExperimentResult(
+        chemicalchangeFactor: ChemicalLevelsChange(dopamine: 0, serotonin: 0, acetylcholine: 0, gaba: 0, glutamate: 0),
+        abilityChangeFactor: AbilityLevelsChange(memory: 0, attention: 0, perception: 0, emotionalRegulation: 0, executiveFunction: 0)
+                                                           
+    )
     
-    var health:Int = 50
+    
     @State var brain:Brain = Brain(
         dopamine: Amount(0.3),
         serotonin: Amount(0.5),
@@ -22,7 +26,7 @@ struct ExperimentView: View {
     @ObservedObject var scene = SceneConfigurator(sceneName: "Brain.dae")
     @State var blocks:[Action] = []
     @State var selectedTab: Int = 0
-    
+    @State var showRunButton: Bool = true
     var body: some View {
         SplitView{
             CustomTabView(selectedTab: $selectedTab, brain: $brain, result: $result, vm: vm)
@@ -30,9 +34,18 @@ struct ExperimentView: View {
                 BrainModelView(sceneConfigurator: scene)
                     .onAppear{
                         scene.start()
+                     
+                    }
+                    .onChange(of: brain.brainHealth){
+                        if brain.brainHealth > 60 {
+                            scene.applyTextureToAll()
+                        }
+                        else{
+                            scene.applyTexture1()
+                        }
                     }
                     .overlay{
-                        Text("Brain Health: \(String(format:"%.0f%",brain.brainHealth))%")
+                        Text("Brain Health: \(String(brain.brainHealth))%")
                             .font(.largeTitle)
                             .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
                             .foregroundColor(.white)
@@ -40,18 +53,36 @@ struct ExperimentView: View {
                     }
                 //run
                 Button(action:{
-                    result = run()
-                    selectedTab = 1
+                    if showRunButton{
+                        result = run()
+                        selectedTab = 1
+                        showRunButton = false
+                    }
+                    else{
+                        vm.blocks = []
+                        selectedTab = 0
+                        showRunButton = true
+                    }
                 }){
                     RoundedRectangle(cornerRadius: 10)
                         .fill(Color.secondary)
                         .frame(width:300, height:100)
                         .overlay{
                             HStack(spacing:10){
-                                Image(systemName: "arrowtriangle.right.fill")
-                                    .foregroundColor(.white)
-                                Text("Run My Code")
-                                    .foregroundColor(.white)
+                                if showRunButton{
+                                    Image(systemName: "arrowtriangle.right.fill")
+                                        .foregroundColor(.white)
+                                    Text("Run My Code")
+                                        .foregroundColor(.white)
+                                }
+                                else{
+                                    Image(systemName:"arrow.clockwise")
+                                        .font(.system(size:40))
+                                        .foregroundColor(.white)
+                                    Text("Try Again")
+                                        .foregroundColor(.white)
+                                }
+                                
                             }
                             .font(.title)
                         }
@@ -102,6 +133,42 @@ struct ExperimentView: View {
                     result.chemicalchangeFactor.glutamate += block.chemicalChange.glutamate
                 }
             }
+            
+            if block.abilityChange.memory != 0 {
+                let rr = brain.memory.calculate(block.abilityChange.memory)
+                if rr.hasChanged{
+                    result.abilityChangeFactor.memory += block.abilityChange.memory
+                }
+            }
+            
+            if block.abilityChange.attention != 0 {
+                let rr = brain.attention.calculate(block.abilityChange.attention)
+                if rr.hasChanged{
+                    result.abilityChangeFactor.attention += block.abilityChange.attention
+                }
+            }
+            
+            if block.abilityChange.perception != 0 {
+                let rr = brain.perception.calculate(block.abilityChange.perception)
+                if rr.hasChanged{
+                    result.abilityChangeFactor.perception += block.abilityChange.perception
+                }
+            }
+            
+            if block.abilityChange.emotionalRegulation != 0{
+                let rr = brain.emotionalRegulation.calculate(block.abilityChange.emotionalRegulation)
+                if rr.hasChanged{
+                    result.abilityChangeFactor.emotionalRegulation += block.abilityChange.emotionalRegulation
+                }
+            }
+            
+            if block.abilityChange.executiveFunction != 0 {
+                let rr = brain.executiveFunction.calculate(block.abilityChange.executiveFunction)
+                if rr.hasChanged{
+                    result.abilityChangeFactor.executiveFunction += block.abilityChange.executiveFunction
+                }
+            }
+            
         }
         return result
     }

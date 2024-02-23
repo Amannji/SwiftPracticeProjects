@@ -13,6 +13,12 @@ struct Brain{
     var gaba: Amount = Amount()
     var glutamate: Amount = Amount()
     
+    var memory: Amount = Amount()
+    var attention: Amount = Amount()
+    var perception: Amount = Amount()
+    var emotionalRegulation: Amount = Amount()
+    var executiveFunction: Amount = Amount()
+    
     private let dopamineImpactFactor: Float = 0.3
     private let serotoninImpactFactor: Float = 0.25
     private let acetylcholineImpactFactor: Float = 0.2
@@ -28,7 +34,7 @@ struct Brain{
         return health
     }
     
-    mutating func effect(chemicalLevels:[ChemicalLevels:Float]? = nil){
+    mutating func effect(chemicalLevels:[ChemicalLevels:Float]? = nil, abilityLevels:[AbilityLevels:Float]? = nil){
         if let chemicalLevels = chemicalLevels{
             if let dopamineChange = chemicalLevels[.dopamine]{
                 dopamine.effect(percentage: dopamineChange)
@@ -46,6 +52,23 @@ struct Brain{
                 glutamate.effect(percentage: glutamateChange)
             }
 
+        }
+        if let abilityLevels = abilityLevels{
+            if let memoryLevelChange = abilityLevels[.memory]{
+                memory.effect(percentage: memoryLevelChange)
+            }
+            if let attentionLevelChange = abilityLevels[.attention]{
+                attention.effect(percentage: attentionLevelChange)
+            }
+            if let perceptionLevelChange = abilityLevels[.perception]{
+                perception.effect(percentage: perceptionLevelChange)
+            }
+            if let emotionalRegulationLevelChange = abilityLevels[.emotionalRegulation]{
+                emotionalRegulation.effect(percentage: emotionalRegulationLevelChange)
+            }
+            if let executiveFunctionLevelChange = abilityLevels[.executiveFunction]{
+                executiveFunction.effect(percentage: executiveFunctionLevelChange)
+            }
         }
     }
 }

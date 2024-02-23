@@ -45,7 +45,18 @@ class SceneConfigurator: ObservableObject{
         diffuseMaterial.diffuse.contents = textureImage
         node.geometry?.materials = [diffuseMaterial]
     }
+    func applyTextureToNode1(_ node: SCNNode){
+        let textureImage = UIImage(named:"Diffuse2.png")
+        let diffuseMaterial = SCNMaterial()
+        diffuseMaterial.diffuse.contents = textureImage
+        node.geometry?.materials = [diffuseMaterial]
+    }
     
+    func applyTexture1(){
+        for childNode in scene.rootNode.childNodes{
+            applyTextureToNode1(childNode)
+        }
+    }
 }
 
 class CodeViewModel: ObservableObject{

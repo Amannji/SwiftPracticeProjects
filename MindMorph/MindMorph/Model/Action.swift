@@ -15,6 +15,7 @@ struct Action: Identifiable{
     var description: String
     var color: Color
     var chemicalChange: ChemicalLevelsChange
+    var abilityChange: AbilityLevelsChange
 }
 
 
